@@ -99,6 +99,11 @@ class HomeTableViewController: UITableViewController {
         }
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let destinationVC = GifImageViewController(with: gifList[indexPath.row])
+        self.navigationController?.pushViewController(destinationVC, animated: true)
+    }
+
     func fetchGifs() {
         let url = URL(string: "https://api.giphy.com/v1/gifs/trending?api_key=7fZEqVczx5ZTQk64kHJ0dPDDZCazxtF0&offset=\(pageNumber * count)")
 
