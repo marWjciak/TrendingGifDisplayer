@@ -29,8 +29,8 @@ struct GifImages: Decodable {
     var fixedWidthStill: GifImage
 
     enum CodingKeys: String, CodingKey {
-        case fixedWidth = "fixed_width"
-        case fixedWidthStill = "fixed_width_still"
+        case fixedWidth = "original"
+        case fixedWidthStill = "original_still"
     }
 }
 
