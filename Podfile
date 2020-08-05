@@ -8,5 +8,6 @@ target 'TrendingGifDisplayer' do
   # Pods for TrendingGifDisplayer
 pod 'GIFImageView'
 pod 'SwipeCellKit'
+pod 'Spinners'
 
 end

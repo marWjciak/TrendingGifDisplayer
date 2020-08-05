@@ -12,7 +12,7 @@ class GifTableViewCell: SwipeTableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-//        setImageConstraints()
+        setImageConstraints()
     }
 
     required init?(coder: NSCoder) {
@@ -28,17 +28,22 @@ class GifTableViewCell: SwipeTableViewCell {
 
             if let imageData = data {
                 imageView?.image = UIImage(data: imageData)
-                setImageConstraints(for: gif.images.fixedWidthStill)
             }
         }
     }
 
-    func setImageConstraints(for image: GifImage) {
-        imageView?.translatesAutoresizingMaskIntoConstraints = false
+    func setImageConstraints() {
+        guard let imageView = imageView else { return }
 
-        imageView?.topAnchor.constraint(equalTo: topAnchor, constant: 2).isActive = true
-        imageView?.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -2).isActive = true
-        imageView?.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 2).isActive = true
-        imageView?.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -2).isActive = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+
+        let constraints = [
+            imageView.topAnchor.constraint(equalTo: topAnchor),
+            imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ]
+
+        NSLayoutConstraint.activate(constraints)
     }
 }

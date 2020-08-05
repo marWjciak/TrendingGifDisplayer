@@ -3,117 +3,149 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0053DB2C5688D05A9B7BACC14C6F0263 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C824F69ECC19A7A9E958057E2E4A36E /* Foundation.framework */; };
-		0853DD4319658BAB968352B57567AEEB /* GIFImageView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDAE4E9247C0DCD7ABDDB41ACC07968 /* GIFImageView-dummy.m */; };
+		034E2981836A18FFD040CAD47741A8F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C824F69ECC19A7A9E958057E2E4A36E /* Foundation.framework */; };
+		0853DD4319658BAB968352B57567AEEB /* GIFImageView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 021E3DA7D79042DE58B3125C6991D848 /* GIFImageView-dummy.m */; };
+		13874E25EF1ECD111BC282ABDE48097D /* SpinnerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D742A2EF0EA0AFAD8C9124E99E81F036 /* SpinnerDelegate.swift */; };
 		166BFDACD221323FA6EBBBE82B88BFD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C824F69ECC19A7A9E958057E2E4A36E /* Foundation.framework */; };
-		2AE1CB979809662C29C04D3F00B62259 /* SwipeExpansionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243CD8FCF4DADCB35179287B4B8EFCAD /* SwipeExpansionStyle.swift */; };
-		2D6766E44CE2092A2E842EA2C021E0FF /* Pods-TrendingGifDisplayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E7D8C207ED44E9ABCC884F689EB13F /* Pods-TrendingGifDisplayer-dummy.m */; };
-		37B21598D79AAB24127E025FD2915CAB /* SwipeCollectionViewCell+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5137AFE1E68B5024E0E96D188C72E5 /* SwipeCollectionViewCell+Display.swift */; };
+		21066A3B8039D6BB60D461A2C65DED62 /* Pods-TrendingGifDisplayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C06E7FE0E3765F652804D87442C00DFC /* Pods-TrendingGifDisplayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2AE1CB979809662C29C04D3F00B62259 /* SwipeExpansionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5F91DAF5EAAF47829562EA9D5C0505 /* SwipeExpansionStyle.swift */; };
+		37B21598D79AAB24127E025FD2915CAB /* SwipeCollectionViewCell+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF558894761E0D6FA6D234D9E0D4FC63 /* SwipeCollectionViewCell+Display.swift */; };
 		41ED73D1A6028591EBBC0519CF689E0F /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE725A4787BE16C4D1AE074D07FFD61 /* ImageIO.framework */; };
-		4C09DF4559F1ED92F2D5FCF68B9533BB /* SwipeActionTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C240C145C6B983C6B39A58DB17B67 /* SwipeActionTransitioning.swift */; };
-		5F29D68FABD1DBFB2CE81CD0EEB8C717 /* Swipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D6F3A4D7BB6D8D3C60435F4BFE6E5 /* Swipeable.swift */; };
+		45A8C6C416C935874C146E0667C08E1C /* Bubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D52C4324E4AA9E556BD2C46C8B584C /* Bubble.swift */; };
+		4C09DF4559F1ED92F2D5FCF68B9533BB /* SwipeActionTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7062F2BF1DE27ECB55144268B4666C /* SwipeActionTransitioning.swift */; };
+		5F29D68FABD1DBFB2CE81CD0EEB8C717 /* Swipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B141D20D7D66705E33D07E193324F913 /* Swipeable.swift */; };
 		5F947E9B347648BDF47F421F7ABF9462 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D85E0AE0D76CA9D8D9828FD9E946862 /* UIKit.framework */; };
-		673675F0D1021CC1AFC87DDDB66F3280 /* SwipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD623AD2FB0D19E843EBC077F931AD49 /* SwipeTableViewCell.swift */; };
-		683808AB342CD6D4B49238896FA41A89 /* SwipeActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77CAAA3A4D835E196F37F01146E775 /* SwipeActionsView.swift */; };
-		6D511F288B33A0B110DD241009EADDF3 /* SwipeFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5739FD52257E4B827B3A53BC308B9A /* SwipeFeedback.swift */; };
-		77B80B1AF5452E5544C84C319F9895C6 /* SwipeCellKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F357AD25F6CE9EDCA437E290B906C27A /* SwipeCellKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B5FEBC758BE2C3E569600DFA545E083 /* SwipeTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8898CB957FB7E703EF7C5AC062B48A /* SwipeTableViewCellDelegate.swift */; };
-		7CFF7CEAACD1B839D0949659B0A983CC /* SwipeTransitionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6757C85F9081F7449715C5AB5C579975 /* SwipeTransitionLayout.swift */; };
-		93DE825E02AB8DD74859BF5124306CE1 /* SwipeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D2B3855B199342B832A45F74633F15 /* SwipeAnimator.swift */; };
-		98FD4EE4D50D5431B633D2CFE35E6490 /* SwipeActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49826D9F521922D1749A793B6BD29717 /* SwipeActionButton.swift */; };
-		9D94E9855EB48604692E0A6EA874541D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8D1E34102DB51B10E7B99CAA47EEA4 /* Extensions.swift */; };
-		A465A69E28DDC33494F2D7B235CDB4CD /* SwipeExpanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAEBEF6CC8613A4DC64B82801E9174E /* SwipeExpanding.swift */; };
-		A827AC7E2BF92ED0BF5C9254FA3CE2CA /* SwipeTableViewCell+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F42B7B7B0B94A40247E73FFF130F4C /* SwipeTableViewCell+Display.swift */; };
-		A90D490E57A38E6C83DC0A626E316834 /* SwipeCellKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B13736E9B2687F9C9786AA3BB5BDC83C /* SwipeCellKit-dummy.m */; };
-		AE26D355E9E86F3079A48C29C7AD3D82 /* SwipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298589A84E5A74456AD7F8C948A530E1 /* SwipeCollectionViewCell.swift */; };
-		B1AC8DBEFE15D998B6197813C20456FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C824F69ECC19A7A9E958057E2E4A36E /* Foundation.framework */; };
-		C8D0704B2906CB54EE63116317370DE4 /* SwipeCollectionViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738FC79121E4638E1F25A447C3AFB18 /* SwipeCollectionViewCellDelegate.swift */; };
-		C9D1D15CED0666CD7FF404B6A13A21FC /* Pods-TrendingGifDisplayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C06E7FE0E3765F652804D87442C00DFC /* Pods-TrendingGifDisplayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC8C17E4A679DA7631148276429128F9 /* GIFImageView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B9915399B54B5F7D257F937240B662B4 /* GIFImageView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D0549E548B8DC5D7A4BACB8E96C9D441 /* SwipeAccessibilityCustomAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5F5A87EC9552CF80E43EDECB91A15 /* SwipeAccessibilityCustomAction.swift */; };
-		D11C8923B0451C47BA946C43CA7B3CC3 /* SwipeCollectionViewCell+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D63407CE9A882691F7B1F9B475D52A4 /* SwipeCollectionViewCell+Accessibility.swift */; };
-		D147BCBC15708326CA8DF3A9EB465E51 /* SwipeTableViewCell+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23D40AF8609A2E81889FC22024123EC /* SwipeTableViewCell+Accessibility.swift */; };
-		D6DFB1257A5B7662A05ABB0983A2715D /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99157101D39BF079366EB4AC05F17B43 /* SwipeAction.swift */; };
-		DB3DAAA9D1BB76ECD1CD6D702D6A2887 /* SwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEFDD19AFD6B2A5B88D0AAB01C2D11C /* SwipeController.swift */; };
-		E514C59F3A036397E120B3D7E7E848A1 /* SwipeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D845736ED8D4265EC6D2EFF2B832B231 /* SwipeOptions.swift */; };
-		F089061CEB2A186790F739969AE9C0D7 /* GIFImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52160BC9B9F79B06EA3084A13A44053 /* GIFImageView.swift */; };
+		621FD08E563FD8B70F23021F8E98F1B6 /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F452AB47AF5147A05613FA7A6FD7AD0 /* Cube.swift */; };
+		673675F0D1021CC1AFC87DDDB66F3280 /* SwipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7321C0A9A9D63B597ECAEE279878209B /* SwipeTableViewCell.swift */; };
+		683808AB342CD6D4B49238896FA41A89 /* SwipeActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFB9C8589B1DF114E56B4BEBD195BB7 /* SwipeActionsView.swift */; };
+		6D511F288B33A0B110DD241009EADDF3 /* SwipeFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16721C4E63ABBF7EE1615BC35496043B /* SwipeFeedback.swift */; };
+		73C4C187E86BD4A40DDED83DD1C59BFA /* Wheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B240C9DDD72BF566E4F6B5B7AFA84FF /* Wheel.swift */; };
+		77B80B1AF5452E5544C84C319F9895C6 /* SwipeCellKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC9DBE9D4688613960C5BC688AEEB49A /* SwipeCellKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B5FEBC758BE2C3E569600DFA545E083 /* SwipeTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF585D2333B55530F0B4B24642434AE /* SwipeTableViewCellDelegate.swift */; };
+		7CFF7CEAACD1B839D0949659B0A983CC /* SwipeTransitionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34524C1C911A5D34855F8331BF2F0C26 /* SwipeTransitionLayout.swift */; };
+		87CFEC18E56F43AD5DC1DC10781B1EEA /* Spinners-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3251099FF022927BC265DC53EC29BC /* Spinners-dummy.m */; };
+		93DE825E02AB8DD74859BF5124306CE1 /* SwipeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A876F44DC7291623B1B4AE1FF859D74A /* SwipeAnimator.swift */; };
+		988260C82535B139E655259259FD0FE4 /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BF61210688782051A6FF22C5343107 /* Custom.swift */; };
+		98FD4EE4D50D5431B633D2CFE35E6490 /* SwipeActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52854D64AF1969FEBF4905733AF3CB0 /* SwipeActionButton.swift */; };
+		9BD7F1C517E5D9F77051DF29B7795B73 /* Pods-TrendingGifDisplayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E7D8C207ED44E9ABCC884F689EB13F /* Pods-TrendingGifDisplayer-dummy.m */; };
+		9D94E9855EB48604692E0A6EA874541D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865045AFBE698F6B91FF0F619598AEDD /* Extensions.swift */; };
+		A465A69E28DDC33494F2D7B235CDB4CD /* SwipeExpanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59854E841CA249C58B8E3A7D2D20F108 /* SwipeExpanding.swift */; };
+		A827AC7E2BF92ED0BF5C9254FA3CE2CA /* SwipeTableViewCell+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC5632F31DE1CC41F9405056CE24506 /* SwipeTableViewCell+Display.swift */; };
+		A90D490E57A38E6C83DC0A626E316834 /* SwipeCellKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5EB31D9EE107F595025CC9FC1124C8 /* SwipeCellKit-dummy.m */; };
+		AE26D355E9E86F3079A48C29C7AD3D82 /* SwipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BD8447F281EBB4DF52CBC5FB39BC18 /* SwipeCollectionViewCell.swift */; };
+		AF43E6C8138C1EFA5E8AD1BFDE9F48AB /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312CE71084A83535DCBB4BC46F3F63DD /* SpinnerView.swift */; };
+		C8D0704B2906CB54EE63116317370DE4 /* SwipeCollectionViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B3FBA5EA9A42A650402C54C3395A13 /* SwipeCollectionViewCellDelegate.swift */; };
+		CC8C17E4A679DA7631148276429128F9 /* GIFImageView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF2A6773CE43E8C05B8E48CD51D9815 /* GIFImageView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0549E548B8DC5D7A4BACB8E96C9D441 /* SwipeAccessibilityCustomAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C49C124F3BCF7FE765FFE968F70E57 /* SwipeAccessibilityCustomAction.swift */; };
+		D11C8923B0451C47BA946C43CA7B3CC3 /* SwipeCollectionViewCell+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D772EB726861C6B980D0940660AD0B1 /* SwipeCollectionViewCell+Accessibility.swift */; };
+		D147BCBC15708326CA8DF3A9EB465E51 /* SwipeTableViewCell+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58953204539B8D682FA6B0722522B19 /* SwipeTableViewCell+Accessibility.swift */; };
+		D6DFB1257A5B7662A05ABB0983A2715D /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395DB2EBD7CDDC28B773CBF0F9A6B5C /* SwipeAction.swift */; };
+		DB3DAAA9D1BB76ECD1CD6D702D6A2887 /* SwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EFC99C80070929AEEBD74A5DCBFD66 /* SwipeController.swift */; };
+		E514C59F3A036397E120B3D7E7E848A1 /* SwipeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0699AC4845F8D577C11F8A1C68C33 /* SwipeOptions.swift */; };
+		ECB5AEA121CD91F98CA10690F06A403C /* Spinners-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1861FAC9E685A002DB4E84C5E30DC062 /* Spinners-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F089061CEB2A186790F739969AE9C0D7 /* GIFImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C17CA896C76FD7572FDF235D08AD867 /* GIFImageView.swift */; };
+		F0C4EE110531948C1484F358507160D5 /* Spinners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D44A1E7738D5E4C1795DA66C5F23BE /* Spinners.swift */; };
+		F49BB249C2926905727F09C740FEEEDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C824F69ECC19A7A9E958057E2E4A36E /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		612F3B9ECBC2D590F7827D7A3B057503 /* PBXContainerItemProxy */ = {
+		0089E59A3C6525E5D840511BFCB66C76 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1DE44C23B82E6671E9E1541D06DE0E87;
-			remoteInfo = SwipeCellKit;
+			remoteGlobalIDString = 833026B3023D6F61D8206A9462DEBF87;
+			remoteInfo = Spinners;
 		};
-		7FC7CFEB3DFFB2D619274C7209F56B52 /* PBXContainerItemProxy */ = {
+		8204D8AD7D955A6B33275E76CB1DA5BD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 59CF2A58A8F0D18EF1DE034D75E7AE5D;
 			remoteInfo = GIFImageView;
 		};
+		F00B93735345C0D200DBDE786D74C580 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DE44C23B82E6671E9E1541D06DE0E87;
+			remoteInfo = SwipeCellKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0CDAE4E9247C0DCD7ABDDB41ACC07968 /* GIFImageView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GIFImageView-dummy.m"; sourceTree = "<group>"; };
+		01D44A1E7738D5E4C1795DA66C5F23BE /* Spinners.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Spinners.swift; path = Spinners/Spinners.swift; sourceTree = "<group>"; };
+		021E3DA7D79042DE58B3125C6991D848 /* GIFImageView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GIFImageView-dummy.m"; sourceTree = "<group>"; };
+		0C17CA896C76FD7572FDF235D08AD867 /* GIFImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFImageView.swift; path = GIFImageView/Classes/GIFImageView.swift; sourceTree = "<group>"; };
 		0DE725A4787BE16C4D1AE074D07FFD61 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
-		10F42B7B7B0B94A40247E73FFF130F4C /* SwipeTableViewCell+Display.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeTableViewCell+Display.swift"; path = "Source/SwipeTableViewCell+Display.swift"; sourceTree = "<group>"; };
-		1D5137AFE1E68B5024E0E96D188C72E5 /* SwipeCollectionViewCell+Display.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeCollectionViewCell+Display.swift"; path = "Source/SwipeCollectionViewCell+Display.swift"; sourceTree = "<group>"; };
-		1D63407CE9A882691F7B1F9B475D52A4 /* SwipeCollectionViewCell+Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeCollectionViewCell+Accessibility.swift"; path = "Source/SwipeCollectionViewCell+Accessibility.swift"; sourceTree = "<group>"; };
-		1EF5F5A87EC9552CF80E43EDECB91A15 /* SwipeAccessibilityCustomAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAccessibilityCustomAction.swift; path = Source/SwipeAccessibilityCustomAction.swift; sourceTree = "<group>"; };
-		243CD8FCF4DADCB35179287B4B8EFCAD /* SwipeExpansionStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeExpansionStyle.swift; path = Source/SwipeExpansionStyle.swift; sourceTree = "<group>"; };
-		298589A84E5A74456AD7F8C948A530E1 /* SwipeCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCollectionViewCell.swift; path = Source/SwipeCollectionViewCell.swift; sourceTree = "<group>"; };
-		2A9C240C145C6B983C6B39A58DB17B67 /* SwipeActionTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionTransitioning.swift; path = Source/SwipeActionTransitioning.swift; sourceTree = "<group>"; };
-		2B8898CB957FB7E703EF7C5AC062B48A /* SwipeTableViewCellDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTableViewCellDelegate.swift; path = Source/SwipeTableViewCellDelegate.swift; sourceTree = "<group>"; };
-		30F46F4140E188661E4AB03838067923 /* SwipeCellKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwipeCellKit.modulemap; sourceTree = "<group>"; };
-		3738FC79121E4638E1F25A447C3AFB18 /* SwipeCollectionViewCellDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCollectionViewCellDelegate.swift; path = Source/SwipeCollectionViewCellDelegate.swift; sourceTree = "<group>"; };
-		3B77CAAA3A4D835E196F37F01146E775 /* SwipeActionsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionsView.swift; path = Source/SwipeActionsView.swift; sourceTree = "<group>"; };
-		3EECCD862BE5B58B07726FE7FE33A3BC /* GIFImageView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GIFImageView-prefix.pch"; sourceTree = "<group>"; };
-		4117FB882D9F61E8D11DCFFB09B32C40 /* GIFImageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GIFImageView.release.xcconfig; sourceTree = "<group>"; };
-		47AF60B930C2A203AD592D0090BA250D /* GIFImageView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GIFImageView-Info.plist"; sourceTree = "<group>"; };
-		49826D9F521922D1749A793B6BD29717 /* SwipeActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionButton.swift; path = Source/SwipeActionButton.swift; sourceTree = "<group>"; };
+		0E5F91DAF5EAAF47829562EA9D5C0505 /* SwipeExpansionStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeExpansionStyle.swift; path = Source/SwipeExpansionStyle.swift; sourceTree = "<group>"; };
+		11BD8447F281EBB4DF52CBC5FB39BC18 /* SwipeCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCollectionViewCell.swift; path = Source/SwipeCollectionViewCell.swift; sourceTree = "<group>"; };
+		16721C4E63ABBF7EE1615BC35496043B /* SwipeFeedback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeFeedback.swift; path = Source/SwipeFeedback.swift; sourceTree = "<group>"; };
+		1861FAC9E685A002DB4E84C5E30DC062 /* Spinners-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spinners-umbrella.h"; sourceTree = "<group>"; };
+		1A3251099FF022927BC265DC53EC29BC /* Spinners-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Spinners-dummy.m"; sourceTree = "<group>"; };
+		205AED26B435DF215B857E4ECC55E2BD /* GIFImageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GIFImageView.release.xcconfig; sourceTree = "<group>"; };
+		2AC5632F31DE1CC41F9405056CE24506 /* SwipeTableViewCell+Display.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeTableViewCell+Display.swift"; path = "Source/SwipeTableViewCell+Display.swift"; sourceTree = "<group>"; };
+		2F5EB31D9EE107F595025CC9FC1124C8 /* SwipeCellKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwipeCellKit-dummy.m"; sourceTree = "<group>"; };
+		312CE71084A83535DCBB4BC46F3F63DD /* SpinnerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpinnerView.swift; path = Spinners/SpinnerView.swift; sourceTree = "<group>"; };
+		34524C1C911A5D34855F8331BF2F0C26 /* SwipeTransitionLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTransitionLayout.swift; path = Source/SwipeTransitionLayout.swift; sourceTree = "<group>"; };
+		36B3FBA5EA9A42A650402C54C3395A13 /* SwipeCollectionViewCellDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeCollectionViewCellDelegate.swift; path = Source/SwipeCollectionViewCellDelegate.swift; sourceTree = "<group>"; };
+		3A01A969236EAEAA7F7CE9240B7FFAF7 /* SwipeCellKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwipeCellKit.modulemap; sourceTree = "<group>"; };
+		3B240C9DDD72BF566E4F6B5B7AFA84FF /* Wheel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Wheel.swift; path = Spinners/Wheel.swift; sourceTree = "<group>"; };
+		403BBFE6648BFB26FB751A205EEF2CE9 /* GIFImageView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GIFImageView.modulemap; sourceTree = "<group>"; };
+		4175E8AC1932E2C0F51D9D5F9343C6AA /* Spinners.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Spinners.framework; path = Spinners.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED96CF28750FB8C70DC6F0396105771 /* GIFImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GIFImageView.framework; path = GIFImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		510949DA5D6E79F668D29FE8EBE284D9 /* GIFImageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GIFImageView.debug.xcconfig; sourceTree = "<group>"; };
-		56D2B3855B199342B832A45F74633F15 /* SwipeAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAnimator.swift; path = Source/SwipeAnimator.swift; sourceTree = "<group>"; };
-		56DFE9ADB86C5605396AC05747C9FC44 /* SwipeCellKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeCellKit-prefix.pch"; sourceTree = "<group>"; };
-		6757C85F9081F7449715C5AB5C579975 /* SwipeTransitionLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTransitionLayout.swift; path = Source/SwipeTransitionLayout.swift; sourceTree = "<group>"; };
+		513486A13DBCC01BE37535F699BCBA84 /* SwipeCellKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeCellKit-prefix.pch"; sourceTree = "<group>"; };
+		59854E841CA249C58B8E3A7D2D20F108 /* SwipeExpanding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeExpanding.swift; path = Source/SwipeExpanding.swift; sourceTree = "<group>"; };
+		5A7062F2BF1DE27ECB55144268B4666C /* SwipeActionTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionTransitioning.swift; path = Source/SwipeActionTransitioning.swift; sourceTree = "<group>"; };
+		6395DB2EBD7CDDC28B773CBF0F9A6B5C /* SwipeAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAction.swift; path = Source/SwipeAction.swift; sourceTree = "<group>"; };
+		65EFC99C80070929AEEBD74A5DCBFD66 /* SwipeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeController.swift; path = Source/SwipeController.swift; sourceTree = "<group>"; };
+		6D772EB726861C6B980D0940660AD0B1 /* SwipeCollectionViewCell+Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeCollectionViewCell+Accessibility.swift"; path = "Source/SwipeCollectionViewCell+Accessibility.swift"; sourceTree = "<group>"; };
+		6EF2A6773CE43E8C05B8E48CD51D9815 /* GIFImageView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GIFImageView-umbrella.h"; sourceTree = "<group>"; };
+		6EFB9C8589B1DF114E56B4BEBD195BB7 /* SwipeActionsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionsView.swift; path = Source/SwipeActionsView.swift; sourceTree = "<group>"; };
+		7321C0A9A9D63B597ECAEE279878209B /* SwipeTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTableViewCell.swift; path = Source/SwipeTableViewCell.swift; sourceTree = "<group>"; };
+		76C2CFC428EF18D67B29B8365482404E /* Spinners.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Spinners.release.xcconfig; sourceTree = "<group>"; };
+		79B6CF17FDDCFDF45FC50F94E174B013 /* GIFImageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GIFImageView.debug.xcconfig; sourceTree = "<group>"; };
 		7C824F69ECC19A7A9E958057E2E4A36E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7F452AB47AF5147A05613FA7A6FD7AD0 /* Cube.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cube.swift; path = Spinners/Cube.swift; sourceTree = "<group>"; };
+		85C275F4C8DA646917F978655F340E5C /* SwipeCellKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwipeCellKit-Info.plist"; sourceTree = "<group>"; };
+		864C6589FD19010C6C0E488A105DA66E /* Spinners.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Spinners.debug.xcconfig; sourceTree = "<group>"; };
+		865045AFBE698F6B91FF0F619598AEDD /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Source/Extensions.swift; sourceTree = "<group>"; };
 		86F0BD4B052C5436930CB18A8D916333 /* Pods-TrendingGifDisplayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TrendingGifDisplayer.debug.xcconfig"; sourceTree = "<group>"; };
+		8AF585D2333B55530F0B4B24642434AE /* SwipeTableViewCellDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTableViewCellDelegate.swift; path = Source/SwipeTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		8D85E0AE0D76CA9D8D9828FD9E946862 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		94E7D8C207ED44E9ABCC884F689EB13F /* Pods-TrendingGifDisplayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TrendingGifDisplayer-dummy.m"; sourceTree = "<group>"; };
-		99157101D39BF079366EB4AC05F17B43 /* SwipeAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAction.swift; path = Source/SwipeAction.swift; sourceTree = "<group>"; };
+		99F82C5B796F48BD32D7C2898BB2AA15 /* Spinners-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spinners-prefix.pch"; sourceTree = "<group>"; };
+		9AB34901B6AEC7F7E515DE86C7011A67 /* SwipeCellKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwipeCellKit.release.xcconfig; sourceTree = "<group>"; };
+		9AE7038967C48329968029388EF79002 /* Spinners.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Spinners.modulemap; sourceTree = "<group>"; };
 		9D443E759FE97A6C0CA5A3B5E4142EBA /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwipeCellKit.framework; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FEFDD19AFD6B2A5B88D0AAB01C2D11C /* SwipeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeController.swift; path = Source/SwipeController.swift; sourceTree = "<group>"; };
-		A23D40AF8609A2E81889FC22024123EC /* SwipeTableViewCell+Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeTableViewCell+Accessibility.swift"; path = "Source/SwipeTableViewCell+Accessibility.swift"; sourceTree = "<group>"; };
+		A1D52C4324E4AA9E556BD2C46C8B584C /* Bubble.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bubble.swift; path = Spinners/Bubble.swift; sourceTree = "<group>"; };
+		A58953204539B8D682FA6B0722522B19 /* SwipeTableViewCell+Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeTableViewCell+Accessibility.swift"; path = "Source/SwipeTableViewCell+Accessibility.swift"; sourceTree = "<group>"; };
 		A5B4ED6B5A8984025FD271BFC9EC7325 /* Pods-TrendingGifDisplayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TrendingGifDisplayer.release.xcconfig"; sourceTree = "<group>"; };
+		A876F44DC7291623B1B4AE1FF859D74A /* SwipeAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAnimator.swift; path = Source/SwipeAnimator.swift; sourceTree = "<group>"; };
 		A91CF26EAC4256801E8343C016C0E298 /* Pods-TrendingGifDisplayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TrendingGifDisplayer.modulemap"; sourceTree = "<group>"; };
-		AE5739FD52257E4B827B3A53BC308B9A /* SwipeFeedback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeFeedback.swift; path = Source/SwipeFeedback.swift; sourceTree = "<group>"; };
-		B13736E9B2687F9C9786AA3BB5BDC83C /* SwipeCellKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwipeCellKit-dummy.m"; sourceTree = "<group>"; };
+		AFF0699AC4845F8D577C11F8A1C68C33 /* SwipeOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeOptions.swift; path = Source/SwipeOptions.swift; sourceTree = "<group>"; };
+		B141D20D7D66705E33D07E193324F913 /* Swipeable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Swipeable.swift; path = Source/Swipeable.swift; sourceTree = "<group>"; };
 		B428292C43794DE2BDBFF76BA1274258 /* Pods-TrendingGifDisplayer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TrendingGifDisplayer-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B9915399B54B5F7D257F937240B662B4 /* GIFImageView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GIFImageView-umbrella.h"; sourceTree = "<group>"; };
+		BBEA0BDAD30C255F5FA80B123350F1FF /* GIFImageView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GIFImageView-prefix.pch"; sourceTree = "<group>"; };
 		C06E7FE0E3765F652804D87442C00DFC /* Pods-TrendingGifDisplayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TrendingGifDisplayer-umbrella.h"; sourceTree = "<group>"; };
-		C86D6F3A4D7BB6D8D3C60435F4BFE6E5 /* Swipeable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Swipeable.swift; path = Source/Swipeable.swift; sourceTree = "<group>"; };
-		CD8D1E34102DB51B10E7B99CAA47EEA4 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Source/Extensions.swift; sourceTree = "<group>"; };
+		C2C49C124F3BCF7FE765FFE968F70E57 /* SwipeAccessibilityCustomAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAccessibilityCustomAction.swift; path = Source/SwipeAccessibilityCustomAction.swift; sourceTree = "<group>"; };
 		CF57A341B17385693BB76A9130FF4384 /* Pods_TrendingGifDisplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TrendingGifDisplayer.framework; path = "Pods-TrendingGifDisplayer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D845736ED8D4265EC6D2EFF2B832B231 /* SwipeOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeOptions.swift; path = Source/SwipeOptions.swift; sourceTree = "<group>"; };
-		D9489BBDB3F118EB8DE646B680479218 /* SwipeCellKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwipeCellKit-Info.plist"; sourceTree = "<group>"; };
-		DAA0BA1B8C606F5D896CEAE060ACF91B /* SwipeCellKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwipeCellKit.release.xcconfig; sourceTree = "<group>"; };
-		DC1F8A625A69F0AB6C1AC96FDD351B57 /* SwipeCellKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwipeCellKit.debug.xcconfig; sourceTree = "<group>"; };
-		DEAEBEF6CC8613A4DC64B82801E9174E /* SwipeExpanding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeExpanding.swift; path = Source/SwipeExpanding.swift; sourceTree = "<group>"; };
+		D52854D64AF1969FEBF4905733AF3CB0 /* SwipeActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionButton.swift; path = Source/SwipeActionButton.swift; sourceTree = "<group>"; };
+		D742A2EF0EA0AFAD8C9124E99E81F036 /* SpinnerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpinnerDelegate.swift; path = Spinners/SpinnerDelegate.swift; sourceTree = "<group>"; };
 		E0CA721FB05AE3C7AF5EB5704B115107 /* Pods-TrendingGifDisplayer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TrendingGifDisplayer-acknowledgements.plist"; sourceTree = "<group>"; };
 		E1C7309BDEC6E2DFAA269D63D3772671 /* Pods-TrendingGifDisplayer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TrendingGifDisplayer-Info.plist"; sourceTree = "<group>"; };
+		E635C5184BBAC2F59E8FFAEC43B427AF /* SwipeCellKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwipeCellKit.debug.xcconfig; sourceTree = "<group>"; };
+		EC9DBE9D4688613960C5BC688AEEB49A /* SwipeCellKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeCellKit-umbrella.h"; sourceTree = "<group>"; };
+		F08332B1EAD85EA69FC3FFEA631B64F3 /* GIFImageView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GIFImageView-Info.plist"; sourceTree = "<group>"; };
 		F0F73ED521B26ACAA7AE04CF34B4EF4C /* Pods-TrendingGifDisplayer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TrendingGifDisplayer-frameworks.sh"; sourceTree = "<group>"; };
-		F357AD25F6CE9EDCA437E290B906C27A /* SwipeCellKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeCellKit-umbrella.h"; sourceTree = "<group>"; };
-		F52160BC9B9F79B06EA3084A13A44053 /* GIFImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFImageView.swift; path = GIFImageView/Classes/GIFImageView.swift; sourceTree = "<group>"; };
-		FD623AD2FB0D19E843EBC077F931AD49 /* SwipeTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTableViewCell.swift; path = Source/SwipeTableViewCell.swift; sourceTree = "<group>"; };
-		FD9B190B12D94D1CC0855AFFACB5ED89 /* GIFImageView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GIFImageView.modulemap; sourceTree = "<group>"; };
+		F70E3ABB0F141B5E672980ABA277FFDC /* Spinners-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Spinners-Info.plist"; sourceTree = "<group>"; };
+		F9BF61210688782051A6FF22C5343107 /* Custom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Custom.swift; path = Spinners/Custom.swift; sourceTree = "<group>"; };
+		FF558894761E0D6FA6D234D9E0D4FC63 /* SwipeCollectionViewCell+Display.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeCollectionViewCell+Display.swift"; path = "Source/SwipeCollectionViewCell+Display.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,19 +159,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6EBEDDAFF3E548D08D009B056EC11A75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				034E2981836A18FFD040CAD47741A8F2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		992138A2D8B9330C27A38891487BC61D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F49BB249C2926905727F09C740FEEEDC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDBEDF442462D623C30146E6B225FD44 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				166BFDACD221323FA6EBBBE82B88BFD7 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F5B8BA6B06B9CBB0D15DBE5C65E7B694 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B1AC8DBEFE15D998B6197813C20456FE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +194,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2412C7624809684A2814D4EB9AAEAE8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31C244768124561E4098907D7FEFCDE4 /* GIFImageView */,
+				4211F8BD96945264474EDEFD527AEC0E /* Spinners */,
+				B2F85E44CF2DC85813B410B26D4A143F /* SwipeCellKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		31C244768124561E4098907D7FEFCDE4 /* GIFImageView */ = {
+			isa = PBXGroup;
+			children = (
+				0C17CA896C76FD7572FDF235D08AD867 /* GIFImageView.swift */,
+				BA75A5D5255D9D376428FE7713635C12 /* Support Files */,
+			);
+			name = GIFImageView;
+			path = GIFImageView;
+			sourceTree = "<group>";
+		};
 		3529397E1BD671A3FF74D49BAC8376D6 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,55 +224,92 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		615D42726C0DA86519C3F37FD070633E /* Products */ = {
+		4211F8BD96945264474EDEFD527AEC0E /* Spinners */ = {
+			isa = PBXGroup;
+			children = (
+				A1D52C4324E4AA9E556BD2C46C8B584C /* Bubble.swift */,
+				7F452AB47AF5147A05613FA7A6FD7AD0 /* Cube.swift */,
+				F9BF61210688782051A6FF22C5343107 /* Custom.swift */,
+				D742A2EF0EA0AFAD8C9124E99E81F036 /* SpinnerDelegate.swift */,
+				01D44A1E7738D5E4C1795DA66C5F23BE /* Spinners.swift */,
+				312CE71084A83535DCBB4BC46F3F63DD /* SpinnerView.swift */,
+				3B240C9DDD72BF566E4F6B5B7AFA84FF /* Wheel.swift */,
+				FB7D1BBD38793471DB65C6AC3875BB53 /* Support Files */,
+			);
+			name = Spinners;
+			path = Spinners;
+			sourceTree = "<group>";
+		};
+		5B53D60507EDF953DC3B921FB9055F6D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A01A969236EAEAA7F7CE9240B7FFAF7 /* SwipeCellKit.modulemap */,
+				2F5EB31D9EE107F595025CC9FC1124C8 /* SwipeCellKit-dummy.m */,
+				85C275F4C8DA646917F978655F340E5C /* SwipeCellKit-Info.plist */,
+				513486A13DBCC01BE37535F699BCBA84 /* SwipeCellKit-prefix.pch */,
+				EC9DBE9D4688613960C5BC688AEEB49A /* SwipeCellKit-umbrella.h */,
+				E635C5184BBAC2F59E8FFAEC43B427AF /* SwipeCellKit.debug.xcconfig */,
+				9AB34901B6AEC7F7E515DE86C7011A67 /* SwipeCellKit.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwipeCellKit";
+			sourceTree = "<group>";
+		};
+		A6F561655199D301083E7406DC92F1B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				4ED96CF28750FB8C70DC6F0396105771 /* GIFImageView.framework */,
 				CF57A341B17385693BB76A9130FF4384 /* Pods_TrendingGifDisplayer.framework */,
+				4175E8AC1932E2C0F51D9D5F9343C6AA /* Spinners.framework */,
 				9D443E759FE97A6C0CA5A3B5E4142EBA /* SwipeCellKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8A47DAD3F22F6401E0BDD63679126BDB /* GIFImageView */ = {
+		B2F85E44CF2DC85813B410B26D4A143F /* SwipeCellKit */ = {
 			isa = PBXGroup;
 			children = (
-				F52160BC9B9F79B06EA3084A13A44053 /* GIFImageView.swift */,
-				EB062E5CBA56FAC2B86D14461995F936 /* Support Files */,
-			);
-			name = GIFImageView;
-			path = GIFImageView;
-			sourceTree = "<group>";
-		};
-		A3762C40D630092C8FCAB9B124D6B1C0 /* SwipeCellKit */ = {
-			isa = PBXGroup;
-			children = (
-				CD8D1E34102DB51B10E7B99CAA47EEA4 /* Extensions.swift */,
-				C86D6F3A4D7BB6D8D3C60435F4BFE6E5 /* Swipeable.swift */,
-				1EF5F5A87EC9552CF80E43EDECB91A15 /* SwipeAccessibilityCustomAction.swift */,
-				99157101D39BF079366EB4AC05F17B43 /* SwipeAction.swift */,
-				49826D9F521922D1749A793B6BD29717 /* SwipeActionButton.swift */,
-				3B77CAAA3A4D835E196F37F01146E775 /* SwipeActionsView.swift */,
-				2A9C240C145C6B983C6B39A58DB17B67 /* SwipeActionTransitioning.swift */,
-				56D2B3855B199342B832A45F74633F15 /* SwipeAnimator.swift */,
-				298589A84E5A74456AD7F8C948A530E1 /* SwipeCollectionViewCell.swift */,
-				1D63407CE9A882691F7B1F9B475D52A4 /* SwipeCollectionViewCell+Accessibility.swift */,
-				1D5137AFE1E68B5024E0E96D188C72E5 /* SwipeCollectionViewCell+Display.swift */,
-				3738FC79121E4638E1F25A447C3AFB18 /* SwipeCollectionViewCellDelegate.swift */,
-				9FEFDD19AFD6B2A5B88D0AAB01C2D11C /* SwipeController.swift */,
-				DEAEBEF6CC8613A4DC64B82801E9174E /* SwipeExpanding.swift */,
-				243CD8FCF4DADCB35179287B4B8EFCAD /* SwipeExpansionStyle.swift */,
-				AE5739FD52257E4B827B3A53BC308B9A /* SwipeFeedback.swift */,
-				D845736ED8D4265EC6D2EFF2B832B231 /* SwipeOptions.swift */,
-				FD623AD2FB0D19E843EBC077F931AD49 /* SwipeTableViewCell.swift */,
-				A23D40AF8609A2E81889FC22024123EC /* SwipeTableViewCell+Accessibility.swift */,
-				10F42B7B7B0B94A40247E73FFF130F4C /* SwipeTableViewCell+Display.swift */,
-				2B8898CB957FB7E703EF7C5AC062B48A /* SwipeTableViewCellDelegate.swift */,
-				6757C85F9081F7449715C5AB5C579975 /* SwipeTransitionLayout.swift */,
-				EBB8FE0A034030213C5EE6F86C602C32 /* Support Files */,
+				865045AFBE698F6B91FF0F619598AEDD /* Extensions.swift */,
+				B141D20D7D66705E33D07E193324F913 /* Swipeable.swift */,
+				C2C49C124F3BCF7FE765FFE968F70E57 /* SwipeAccessibilityCustomAction.swift */,
+				6395DB2EBD7CDDC28B773CBF0F9A6B5C /* SwipeAction.swift */,
+				D52854D64AF1969FEBF4905733AF3CB0 /* SwipeActionButton.swift */,
+				6EFB9C8589B1DF114E56B4BEBD195BB7 /* SwipeActionsView.swift */,
+				5A7062F2BF1DE27ECB55144268B4666C /* SwipeActionTransitioning.swift */,
+				A876F44DC7291623B1B4AE1FF859D74A /* SwipeAnimator.swift */,
+				11BD8447F281EBB4DF52CBC5FB39BC18 /* SwipeCollectionViewCell.swift */,
+				6D772EB726861C6B980D0940660AD0B1 /* SwipeCollectionViewCell+Accessibility.swift */,
+				FF558894761E0D6FA6D234D9E0D4FC63 /* SwipeCollectionViewCell+Display.swift */,
+				36B3FBA5EA9A42A650402C54C3395A13 /* SwipeCollectionViewCellDelegate.swift */,
+				65EFC99C80070929AEEBD74A5DCBFD66 /* SwipeController.swift */,
+				59854E841CA249C58B8E3A7D2D20F108 /* SwipeExpanding.swift */,
+				0E5F91DAF5EAAF47829562EA9D5C0505 /* SwipeExpansionStyle.swift */,
+				16721C4E63ABBF7EE1615BC35496043B /* SwipeFeedback.swift */,
+				AFF0699AC4845F8D577C11F8A1C68C33 /* SwipeOptions.swift */,
+				7321C0A9A9D63B597ECAEE279878209B /* SwipeTableViewCell.swift */,
+				A58953204539B8D682FA6B0722522B19 /* SwipeTableViewCell+Accessibility.swift */,
+				2AC5632F31DE1CC41F9405056CE24506 /* SwipeTableViewCell+Display.swift */,
+				8AF585D2333B55530F0B4B24642434AE /* SwipeTableViewCellDelegate.swift */,
+				34524C1C911A5D34855F8331BF2F0C26 /* SwipeTransitionLayout.swift */,
+				5B53D60507EDF953DC3B921FB9055F6D /* Support Files */,
 			);
 			name = SwipeCellKit;
 			path = SwipeCellKit;
+			sourceTree = "<group>";
+		};
+		BA75A5D5255D9D376428FE7713635C12 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				403BBFE6648BFB26FB751A205EEF2CE9 /* GIFImageView.modulemap */,
+				021E3DA7D79042DE58B3125C6991D848 /* GIFImageView-dummy.m */,
+				F08332B1EAD85EA69FC3FFEA631B64F3 /* GIFImageView-Info.plist */,
+				BBEA0BDAD30C255F5FA80B123350F1FF /* GIFImageView-prefix.pch */,
+				6EF2A6773CE43E8C05B8E48CD51D9815 /* GIFImageView-umbrella.h */,
+				79B6CF17FDDCFDF45FC50F94E174B013 /* GIFImageView.debug.xcconfig */,
+				205AED26B435DF215B857E4ECC55E2BD /* GIFImageView.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GIFImageView";
 			sourceTree = "<group>";
 		};
 		C597FF43BDBB8C5451EC523F4AE956E9 /* Pods-TrendingGifDisplayer */ = {
@@ -237,8 +334,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
-				FF0D77D089D149A10E803440447DF508 /* Pods */,
-				615D42726C0DA86519C3F37FD070633E /* Products */,
+				2412C7624809684A2814D4EB9AAEAE8F /* Pods */,
+				A6F561655199D301083E7406DC92F1B7 /* Products */,
 				E12B7DC17CEF054353069A6C484D1FEC /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -251,43 +348,19 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		EB062E5CBA56FAC2B86D14461995F936 /* Support Files */ = {
+		FB7D1BBD38793471DB65C6AC3875BB53 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				FD9B190B12D94D1CC0855AFFACB5ED89 /* GIFImageView.modulemap */,
-				0CDAE4E9247C0DCD7ABDDB41ACC07968 /* GIFImageView-dummy.m */,
-				47AF60B930C2A203AD592D0090BA250D /* GIFImageView-Info.plist */,
-				3EECCD862BE5B58B07726FE7FE33A3BC /* GIFImageView-prefix.pch */,
-				B9915399B54B5F7D257F937240B662B4 /* GIFImageView-umbrella.h */,
-				510949DA5D6E79F668D29FE8EBE284D9 /* GIFImageView.debug.xcconfig */,
-				4117FB882D9F61E8D11DCFFB09B32C40 /* GIFImageView.release.xcconfig */,
+				9AE7038967C48329968029388EF79002 /* Spinners.modulemap */,
+				1A3251099FF022927BC265DC53EC29BC /* Spinners-dummy.m */,
+				F70E3ABB0F141B5E672980ABA277FFDC /* Spinners-Info.plist */,
+				99F82C5B796F48BD32D7C2898BB2AA15 /* Spinners-prefix.pch */,
+				1861FAC9E685A002DB4E84C5E30DC062 /* Spinners-umbrella.h */,
+				864C6589FD19010C6C0E488A105DA66E /* Spinners.debug.xcconfig */,
+				76C2CFC428EF18D67B29B8365482404E /* Spinners.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/GIFImageView";
-			sourceTree = "<group>";
-		};
-		EBB8FE0A034030213C5EE6F86C602C32 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				30F46F4140E188661E4AB03838067923 /* SwipeCellKit.modulemap */,
-				B13736E9B2687F9C9786AA3BB5BDC83C /* SwipeCellKit-dummy.m */,
-				D9489BBDB3F118EB8DE646B680479218 /* SwipeCellKit-Info.plist */,
-				56DFE9ADB86C5605396AC05747C9FC44 /* SwipeCellKit-prefix.pch */,
-				F357AD25F6CE9EDCA437E290B906C27A /* SwipeCellKit-umbrella.h */,
-				DC1F8A625A69F0AB6C1AC96FDD351B57 /* SwipeCellKit.debug.xcconfig */,
-				DAA0BA1B8C606F5D896CEAE060ACF91B /* SwipeCellKit.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwipeCellKit";
-			sourceTree = "<group>";
-		};
-		FF0D77D089D149A10E803440447DF508 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8A47DAD3F22F6401E0BDD63679126BDB /* GIFImageView */,
-				A3762C40D630092C8FCAB9B124D6B1C0 /* SwipeCellKit */,
-			);
-			name = Pods;
+			path = "../Target Support Files/Spinners";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,11 +374,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		812D6FE90938B01E965AA6D4C8FFA36C /* Headers */ = {
+		5DDDF84E04B018652237F6D44C7DCEDE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9D1D15CED0666CD7FF404B6A13A21FC /* Pods-TrendingGifDisplayer-umbrella.h in Headers */,
+				21066A3B8039D6BB60D461A2C65DED62 /* Pods-TrendingGifDisplayer-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +387,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC8C17E4A679DA7631148276429128F9 /* GIFImageView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3FD74398D2BBDCF0E8B91DF9D5E7B59 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECB5AEA121CD91F98CA10690F06A403C /* Spinners-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,20 +437,39 @@
 			productReference = 4ED96CF28750FB8C70DC6F0396105771 /* GIFImageView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A6A7EDA0C1C2CD39AEE305EF117ABA81 /* Pods-TrendingGifDisplayer */ = {
+		833026B3023D6F61D8206A9462DEBF87 /* Spinners */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 47F9678B65BE9603066BD5EDCE37D77B /* Build configuration list for PBXNativeTarget "Pods-TrendingGifDisplayer" */;
+			buildConfigurationList = E613DF3E33830CDEBF64B3FC58A0E922 /* Build configuration list for PBXNativeTarget "Spinners" */;
 			buildPhases = (
-				812D6FE90938B01E965AA6D4C8FFA36C /* Headers */,
-				290D7E260669AF538442DBDBA8B189B4 /* Sources */,
-				F5B8BA6B06B9CBB0D15DBE5C65E7B694 /* Frameworks */,
-				4216FA5E860F2CE60CF63FB800EA3CF4 /* Resources */,
+				E3FD74398D2BBDCF0E8B91DF9D5E7B59 /* Headers */,
+				26E60AFE423409DA1CE3B774A44F3E41 /* Sources */,
+				6EBEDDAFF3E548D08D009B056EC11A75 /* Frameworks */,
+				902AF1AD28858B83DDCE6781F18761EC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A3F45C61DE4687564C586445AA9C1F39 /* PBXTargetDependency */,
-				3F5CCE8BA258158C86B54DBBBC30CFD4 /* PBXTargetDependency */,
+			);
+			name = Spinners;
+			productName = Spinners;
+			productReference = 4175E8AC1932E2C0F51D9D5F9343C6AA /* Spinners.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A6A7EDA0C1C2CD39AEE305EF117ABA81 /* Pods-TrendingGifDisplayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BA24F4A0EA310824D7124658172C537 /* Build configuration list for PBXNativeTarget "Pods-TrendingGifDisplayer" */;
+			buildPhases = (
+				5DDDF84E04B018652237F6D44C7DCEDE /* Headers */,
+				0AA20F8C5A6EE359B189DB10002596BA /* Sources */,
+				992138A2D8B9330C27A38891487BC61D /* Frameworks */,
+				B524B6197269452ADFE3BB57552FEFF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C23D9525E8A246905C85BFFA74A7D3D0 /* PBXTargetDependency */,
+				061D8076ADF6FB45271C96215CAF4122 /* PBXTargetDependency */,
+				7AB29F2179AD47138599B8D625F09538 /* PBXTargetDependency */,
 			);
 			name = "Pods-TrendingGifDisplayer";
 			productName = "Pods-TrendingGifDisplayer";
@@ -386,7 +486,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -394,26 +494,27 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 615D42726C0DA86519C3F37FD070633E /* Products */;
+			productRefGroup = A6F561655199D301083E7406DC92F1B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				59CF2A58A8F0D18EF1DE034D75E7AE5D /* GIFImageView */,
 				A6A7EDA0C1C2CD39AEE305EF117ABA81 /* Pods-TrendingGifDisplayer */,
+				833026B3023D6F61D8206A9462DEBF87 /* Spinners */,
 				1DE44C23B82E6671E9E1541D06DE0E87 /* SwipeCellKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4216FA5E860F2CE60CF63FB800EA3CF4 /* Resources */ = {
+		470E5422AA31FA9A402A1DC0BD314F6E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		470E5422AA31FA9A402A1DC0BD314F6E /* Resources */ = {
+		902AF1AD28858B83DDCE6781F18761EC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -427,14 +528,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B524B6197269452ADFE3BB57552FEFF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		290D7E260669AF538442DBDBA8B189B4 /* Sources */ = {
+		0AA20F8C5A6EE359B189DB10002596BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D6766E44CE2092A2E842EA2C021E0FF /* Pods-TrendingGifDisplayer-dummy.m in Sources */,
+				9BD7F1C517E5D9F77051DF29B7795B73 /* Pods-TrendingGifDisplayer-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26E60AFE423409DA1CE3B774A44F3E41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A8C6C416C935874C146E0667C08E1C /* Bubble.swift in Sources */,
+				621FD08E563FD8B70F23021F8E98F1B6 /* Cube.swift in Sources */,
+				988260C82535B139E655259259FD0FE4 /* Custom.swift in Sources */,
+				13874E25EF1ECD111BC282ABDE48097D /* SpinnerDelegate.swift in Sources */,
+				87CFEC18E56F43AD5DC1DC10781B1EEA /* Spinners-dummy.m in Sources */,
+				F0C4EE110531948C1484F358507160D5 /* Spinners.swift in Sources */,
+				AF43E6C8138C1EFA5E8AD1BFDE9F48AB /* SpinnerView.swift in Sources */,
+				73C4C187E86BD4A40DDED83DD1C59BFA /* Wheel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,17 +603,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3F5CCE8BA258158C86B54DBBBC30CFD4 /* PBXTargetDependency */ = {
+		061D8076ADF6FB45271C96215CAF4122 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Spinners;
+			target = 833026B3023D6F61D8206A9462DEBF87 /* Spinners */;
+			targetProxy = 0089E59A3C6525E5D840511BFCB66C76 /* PBXContainerItemProxy */;
+		};
+		7AB29F2179AD47138599B8D625F09538 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwipeCellKit;
 			target = 1DE44C23B82E6671E9E1541D06DE0E87 /* SwipeCellKit */;
-			targetProxy = 612F3B9ECBC2D590F7827D7A3B057503 /* PBXContainerItemProxy */;
+			targetProxy = F00B93735345C0D200DBDE786D74C580 /* PBXContainerItemProxy */;
 		};
-		A3F45C61DE4687564C586445AA9C1F39 /* PBXTargetDependency */ = {
+		C23D9525E8A246905C85BFFA74A7D3D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GIFImageView;
 			target = 59CF2A58A8F0D18EF1DE034D75E7AE5D /* GIFImageView */;
-			targetProxy = 7FC7CFEB3DFFB2D619274C7209F56B52 /* PBXContainerItemProxy */;
+			targetProxy = 8204D8AD7D955A6B33275E76CB1DA5BD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -555,114 +684,7 @@
 			};
 			name = Release;
 		};
-		3584595DD406CECEAB53C52F9E2E1154 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC1F8A625A69F0AB6C1AC96FDD351B57 /* SwipeCellKit.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwipeCellKit/SwipeCellKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit.modulemap";
-				PRODUCT_MODULE_NAME = SwipeCellKit;
-				PRODUCT_NAME = SwipeCellKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		45A364B2C89824ECB72F5F787EA80B2F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4117FB882D9F61E8D11DCFFB09B32C40 /* GIFImageView.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GIFImageView/GIFImageView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GIFImageView/GIFImageView-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/GIFImageView/GIFImageView.modulemap";
-				PRODUCT_MODULE_NAME = GIFImageView;
-				PRODUCT_NAME = GIFImageView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5733E228875D24D226AB76ADDEE73BFC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAA0BA1B8C606F5D896CEAE060ACF91B /* SwipeCellKit.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwipeCellKit/SwipeCellKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit.modulemap";
-				PRODUCT_MODULE_NAME = SwipeCellKit;
-				PRODUCT_NAME = SwipeCellKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		68638812ECE81B78345CF7A058CB3090 /* Debug */ = {
+		27663CA09A0FEFDDB64F549E0E8A88D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 86F0BD4B052C5436930CB18A8D916333 /* Pods-TrendingGifDisplayer.debug.xcconfig */;
 			buildSettings = {
@@ -700,7 +722,187 @@
 			};
 			name = Debug;
 		};
-		D72A2211EDDE8F926F305A92D7D9F70C /* Release */ = {
+		3584595DD406CECEAB53C52F9E2E1154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E635C5184BBAC2F59E8FFAEC43B427AF /* SwipeCellKit.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwipeCellKit/SwipeCellKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit.modulemap";
+				PRODUCT_MODULE_NAME = SwipeCellKit;
+				PRODUCT_NAME = SwipeCellKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		45A364B2C89824ECB72F5F787EA80B2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 205AED26B435DF215B857E4ECC55E2BD /* GIFImageView.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GIFImageView/GIFImageView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GIFImageView/GIFImageView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/GIFImageView/GIFImageView.modulemap";
+				PRODUCT_MODULE_NAME = GIFImageView;
+				PRODUCT_NAME = GIFImageView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5733E228875D24D226AB76ADDEE73BFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AB34901B6AEC7F7E515DE86C7011A67 /* SwipeCellKit.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwipeCellKit/SwipeCellKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwipeCellKit/SwipeCellKit.modulemap";
+				PRODUCT_MODULE_NAME = SwipeCellKit;
+				PRODUCT_NAME = SwipeCellKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		600EC0D60A2B96AB6ED807D4F6CB411B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76C2CFC428EF18D67B29B8365482404E /* Spinners.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Spinners/Spinners-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spinners/Spinners-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Spinners/Spinners.modulemap";
+				PRODUCT_MODULE_NAME = Spinners;
+				PRODUCT_NAME = Spinners;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		780200DB75A59FE3E630FCAEAEC4B43B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 864C6589FD19010C6C0E488A105DA66E /* Spinners.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Spinners/Spinners-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spinners/Spinners-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Spinners/Spinners.modulemap";
+				PRODUCT_MODULE_NAME = Spinners;
+				PRODUCT_NAME = Spinners;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AB0E0DEB2E8593F57FFCEFDDBD13FB5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A5B4ED6B5A8984025FD271BFC9EC7325 /* Pods-TrendingGifDisplayer.release.xcconfig */;
 			buildSettings = {
@@ -805,7 +1007,7 @@
 		};
 		F4287EAD7F04B78CF85D953AC25FAD48 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 510949DA5D6E79F668D29FE8EBE284D9 /* GIFImageView.debug.xcconfig */;
+			baseConfigurationReference = 79B6CF17FDDCFDF45FC50F94E174B013 /* GIFImageView.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -841,20 +1043,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		47F9678B65BE9603066BD5EDCE37D77B /* Build configuration list for PBXNativeTarget "Pods-TrendingGifDisplayer" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				68638812ECE81B78345CF7A058CB3090 /* Debug */,
-				D72A2211EDDE8F926F305A92D7D9F70C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD8F832993327D1DD8046C3CBCBD97CD /* Debug */,
 				257497152829C177993B5EC99C1D227A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BA24F4A0EA310824D7124658172C537 /* Build configuration list for PBXNativeTarget "Pods-TrendingGifDisplayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27663CA09A0FEFDDB64F549E0E8A88D0 /* Debug */,
+				AB0E0DEB2E8593F57FFCEFDDBD13FB5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -873,6 +1075,15 @@
 			buildConfigurations = (
 				F4287EAD7F04B78CF85D953AC25FAD48 /* Debug */,
 				45A364B2C89824ECB72F5F787EA80B2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E613DF3E33830CDEBF64B3FC58A0E922 /* Build configuration list for PBXNativeTarget "Spinners" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				780200DB75A59FE3E630FCAEAEC4B43B /* Debug */,
+				600EC0D60A2B96AB6ED807D4F6CB411B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

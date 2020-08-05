@@ -6,10 +6,16 @@
 //
 
 import SwipeCellKit
+import Spinners
 import UIKit
 
 class HomeTableViewController: UITableViewController {
     let favouritieGifController = FavouriteGifsController(defaults: .standard)
+    var spinner = Spinners()
+    let footerSpinner = UIActivityIndicatorView(style: .whiteLarge)
+    var pageNumber: Int = 0
+    var count: Int = 0
+    var totalItems: Int = 0
     var showFavourities: Bool = false
     var totalGifList: [Gif] = []
 
@@ -35,18 +41,29 @@ class HomeTableViewController: UITableViewController {
         }
     }
 
-    var pageNumber: Int = 0
-    var count: Int = 0
-    var totalItems: Int = 0
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: favouriteImage, style:.plain, target: self, action: #selector(showFavouritiesPressed))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: favouriteImage, style: .plain, target: self, action: #selector(showFavouritiesPressed))
+        navigationItem.rightBarButtonItem?.tintColor = .red
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.systemYellow]
+        navigationController?.navigationBar.topItem?.title = "Gif Displayer"
 
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .black
         tableView.register(GifTableViewCell.self, forCellReuseIdentifier: "gifCell")
+
+        spinner = Spinners(type: .cube, with: self)
+        spinner.setCustomSettings(borderColor: .systemYellow, backgroundColor: .clear, alpha: 0.8)
+
+        footerSpinner.color = .systemYellow
+        footerSpinner.hidesWhenStopped = true
+        tableView.tableFooterView = footerSpinner
+        tableView.tableFooterView?.backgroundColor = .black
 
         fetchGifs()
     }
@@ -75,6 +92,9 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == gifList.count - 1, totalItems > gifList.count, !showFavourities {
+            DispatchQueue.main.async {
+                self.footerSpinner.startAnimating()
+            }
             fetchGifs()
         }
     }
@@ -88,11 +108,20 @@ class HomeTableViewController: UITableViewController {
             guard let data = data else { return }
 
             do {
+                DispatchQueue.main.async {
+                    self.spinner.present()
+                }
                 let gifs = try JSONDecoder().decode(Gifs.self, from: data)
                 gifs.data.forEach { gif in
                     self.totalGifList.append(gif)
                 }
                 DispatchQueue.main.async {
+                    self.spinner.dismiss()
+
+                    if self.footerSpinner.isAnimating {
+                        self.footerSpinner.stopAnimating()
+                    }
+
                     self.tableView.reloadData()
                 }
 
@@ -117,7 +146,7 @@ extension HomeTableViewController: SwipeTableViewCellDelegate {
             if self.favouritieGifController.contains(self.gifList[indexPath.row].id) {
                 self.favouritieGifController.rem(gif: self.gifList[indexPath.row])
                 if self.showFavourities {
-                    self.tableView.deleteRows(at: [indexPath], with: .fade)
+                    self.tableView.deleteRows(at: [indexPath], with: .automatic)
                 }
             } else {
                 self.favouritieGifController.add(gif: self.gifList[indexPath.row])
