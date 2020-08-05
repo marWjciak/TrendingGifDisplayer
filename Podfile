@@ -6,6 +6,7 @@ target 'TrendingGifDisplayer' do
   use_frameworks!
 
   # Pods for TrendingGifDisplayer
-
+pod 'GIFImageView'
+pod 'SwipeCellKit'
 
 end

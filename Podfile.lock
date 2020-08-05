@@ -1,0 +1,20 @@
+PODS:
+  - GIFImageView (0.1.0)
+  - SwipeCellKit (2.7.1)
+
+DEPENDENCIES:
+  - GIFImageView
+  - SwipeCellKit
+
+SPEC REPOS:
+  trunk:
+    - GIFImageView
+    - SwipeCellKit
+
+SPEC CHECKSUMS:
+  GIFImageView: cd6a500b9bac1942cb66b73452b97baa6e75280d
+  SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
+
+PODFILE CHECKSUM: 1a9fa7bbaf205df3c37f85bb2c0b23893a5de790
+
+COCOAPODS: 1.9.1

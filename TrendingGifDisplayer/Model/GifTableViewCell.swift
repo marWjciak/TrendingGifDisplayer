@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class GifTableViewCell: UITableViewCell {
+class GifTableViewCell: SwipeTableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
@@ -18,7 +19,9 @@ class GifTableViewCell: UITableViewCell {
         fatalError("init(coder:) has never been implemented...")
     }
 
-    func set(with gif: Gif) {
+    func set(with gif: Gif, andDelegate delegate: SwipeTableViewCellDelegate) {
+        self.delegate = delegate
+        
         let url = URL(string: gif.images.fixedWidthStill.url)
         if let url = url {
             let data = try? Data(contentsOf: url)

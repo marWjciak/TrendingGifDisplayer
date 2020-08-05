@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACC6590594DF830C71D052D0 /* Pods_TrendingGifDisplayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DD941C86C8F44AA248010F /* Pods_TrendingGifDisplayer.framework */; };
 		D36B585F24D9B15A00B320E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36B585E24D9B15A00B320E2 /* AppDelegate.swift */; };
 		D36B586324D9B15A00B320E2 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36B586224D9B15A00B320E2 /* HomeTableViewController.swift */; };
 		D36B586824D9B15C00B320E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36B586724D9B15C00B320E2 /* Assets.xcassets */; };
@@ -14,9 +15,13 @@
 		D36B587424D9B46B00B320E2 /* Gifs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36B587324D9B46B00B320E2 /* Gifs.swift */; };
 		D36B587824D9B62F00B320E2 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36B587724D9B62F00B320E2 /* Gif.swift */; };
 		D36B587D24D9BF2400B320E2 /* GifTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36B587C24D9BF2300B320E2 /* GifTableViewCell.swift */; };
+		D382FAA024DA76A700BBE9EE /* FavouriteGifsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FA9F24DA76A700BBE9EE /* FavouriteGifsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E2258632E695EC9DE93989A /* Pods-TrendingGifDisplayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendingGifDisplayer.debug.xcconfig"; path = "Target Support Files/Pods-TrendingGifDisplayer/Pods-TrendingGifDisplayer.debug.xcconfig"; sourceTree = "<group>"; };
+		6A56FA0B276BF0A7A1E483E8 /* Pods-TrendingGifDisplayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendingGifDisplayer.release.xcconfig"; path = "Target Support Files/Pods-TrendingGifDisplayer/Pods-TrendingGifDisplayer.release.xcconfig"; sourceTree = "<group>"; };
+		D2DD941C86C8F44AA248010F /* Pods_TrendingGifDisplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrendingGifDisplayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36B585B24D9B15A00B320E2 /* TrendingGifDisplayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendingGifDisplayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36B585E24D9B15A00B320E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D36B586224D9B15A00B320E2 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		D36B587324D9B46B00B320E2 /* Gifs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gifs.swift; sourceTree = "<group>"; };
 		D36B587724D9B62F00B320E2 /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		D36B587C24D9BF2300B320E2 /* GifTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifTableViewCell.swift; sourceTree = "<group>"; };
+		D382FA9F24DA76A700BBE9EE /* FavouriteGifsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteGifsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACC6590594DF830C71D052D0 /* Pods_TrendingGifDisplayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		871997D67A47FAD91E624F57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2DD941C86C8F44AA248010F /* Pods_TrendingGifDisplayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDF15927F702C0955C187674 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E2258632E695EC9DE93989A /* Pods-TrendingGifDisplayer.debug.xcconfig */,
+				6A56FA0B276BF0A7A1E483E8 /* Pods-TrendingGifDisplayer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D36B585224D9B15A00B320E2 = {
 			isa = PBXGroup;
 			children = (
 				D36B585D24D9B15A00B320E2 /* TrendingGifDisplayer */,
 				D36B585C24D9B15A00B320E2 /* Products */,
+				BDF15927F702C0955C187674 /* Pods */,
+				871997D67A47FAD91E624F57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +87,7 @@
 				D36B587224D9B45B00B320E2 /* Model */,
 				D36B585E24D9B15A00B320E2 /* AppDelegate.swift */,
 				D36B586224D9B15A00B320E2 /* HomeTableViewController.swift */,
+				D382FA9F24DA76A700BBE9EE /* FavouriteGifsController.swift */,
 				D36B586724D9B15C00B320E2 /* Assets.xcassets */,
 				D36B586924D9B15C00B320E2 /* LaunchScreen.storyboard */,
 				D36B586C24D9B15C00B320E2 /* Info.plist */,
@@ -85,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D36B586F24D9B15C00B320E2 /* Build configuration list for PBXNativeTarget "TrendingGifDisplayer" */;
 			buildPhases = (
+				01E861034742BBAFEF62C0E9 /* [CP] Check Pods Manifest.lock */,
 				D36B585724D9B15A00B320E2 /* Sources */,
 				D36B585824D9B15A00B320E2 /* Frameworks */,
 				D36B585924D9B15A00B320E2 /* Resources */,
+				1F2D6FB4FB96420FC375FC12 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,6 +171,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01E861034742BBAFEF62C0E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrendingGifDisplayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1F2D6FB4FB96420FC375FC12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrendingGifDisplayer/Pods-TrendingGifDisplayer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrendingGifDisplayer/Pods-TrendingGifDisplayer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrendingGifDisplayer/Pods-TrendingGifDisplayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D36B585724D9B15A00B320E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -151,6 +222,7 @@
 				D36B587424D9B46B00B320E2 /* Gifs.swift in Sources */,
 				D36B586324D9B15A00B320E2 /* HomeTableViewController.swift in Sources */,
 				D36B587D24D9BF2400B320E2 /* GifTableViewCell.swift in Sources */,
+				D382FAA024DA76A700BBE9EE /* FavouriteGifsController.swift in Sources */,
 				D36B585F24D9B15A00B320E2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +359,7 @@
 		};
 		D36B587024D9B15C00B320E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E2258632E695EC9DE93989A /* Pods-TrendingGifDisplayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -307,6 +380,7 @@
 		};
 		D36B587124D9B15C00B320E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A56FA0B276BF0A7A1E483E8 /* Pods-TrendingGifDisplayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
