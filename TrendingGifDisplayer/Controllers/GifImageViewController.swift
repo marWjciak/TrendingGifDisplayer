@@ -29,6 +29,8 @@ class GifImageViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(saveGifPressed))
         navigationItem.rightBarButtonItem?.tintColor = .systemYellow
 
+        navigationController?.navigationBar.tintColor = .systemYellow
+
         let view = UIView()
         view.backgroundColor = .black
 
