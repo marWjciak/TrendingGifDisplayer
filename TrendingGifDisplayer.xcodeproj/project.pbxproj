@@ -110,8 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				D36B586224D9B15A00B320E2 /* HomeTableViewController.swift */,
-				D382FA9F24DA76A700BBE9EE /* FavouriteGifsController.swift */,
 				D382FAA224DB688700BBE9EE /* GifImageViewController.swift */,
+				D382FA9F24DA76A700BBE9EE /* FavouriteGifsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

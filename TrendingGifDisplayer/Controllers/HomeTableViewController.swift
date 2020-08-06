@@ -5,8 +5,8 @@
 //  Created by Marcin Wójciak on 04/08/2020.
 //
 
-import SwipeCellKit
 import Spinners
+import SwipeCellKit
 import UIKit
 
 class HomeTableViewController: UITableViewController {
@@ -18,10 +18,6 @@ class HomeTableViewController: UITableViewController {
     var totalItems: Int = 0
     var showFavourities: Bool = false
     var totalGifList: [Gif] = []
-
-    var filteredGifList: [Gif] {
-        return gifList.filter { favouritieGifController.contains($0.id) }
-    }
 
     var gifList: [Gif] {
         if showFavourities {
@@ -101,7 +97,7 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let destinationVC = GifImageViewController(with: gifList[indexPath.row])
-        self.navigationController?.pushViewController(destinationVC, animated: true)
+        navigationController?.pushViewController(destinationVC, animated: true)
     }
 
     func fetchGifs() {
@@ -109,7 +105,13 @@ class HomeTableViewController: UITableViewController {
 
         guard let safeUrl = url else { return }
 
-        let task = URLSession.shared.dataTask(with: safeUrl) { data, _, _ in
+        fetch(from: safeUrl)
+
+        pageNumber += 1
+    }
+
+    func fetch(from url: URL) {
+        let task = URLSession.shared.dataTask(with: url) { data, _, _ in
             guard let data = data else { return }
 
             do {
@@ -118,7 +120,9 @@ class HomeTableViewController: UITableViewController {
                 }
                 let gifs = try JSONDecoder().decode(Gifs.self, from: data)
                 gifs.data.forEach { gif in
-                    self.totalGifList.append(gif)
+                    if !self.totalGifList.contains(gif) {
+                        self.totalGifList.append(gif)
+                    }
                 }
                 DispatchQueue.main.async {
                     self.spinner.dismiss()
@@ -137,7 +141,6 @@ class HomeTableViewController: UITableViewController {
             }
         }
         task.resume()
-        pageNumber += 1
     }
 }
 

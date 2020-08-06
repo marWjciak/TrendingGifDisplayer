@@ -24,6 +24,16 @@ struct Gif: Decodable {
     }
 }
 
+extension Gif: Comparable {
+    static func < (lhs: Gif, rhs: Gif) -> Bool {
+        return lhs.id < rhs.id
+    }
+
+    static func ==(lhs: Gif, rhs: Gif) -> Bool {
+        return rhs.id == lhs.id
+    }
+}
+
 struct GifImages: Decodable {
     var fixedWidth: GifImage
     var fixedWidthStill: GifImage
