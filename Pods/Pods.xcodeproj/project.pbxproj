@@ -96,8 +96,8 @@
 		3A01A969236EAEAA7F7CE9240B7FFAF7 /* SwipeCellKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwipeCellKit.modulemap; sourceTree = "<group>"; };
 		3B240C9DDD72BF566E4F6B5B7AFA84FF /* Wheel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Wheel.swift; path = Spinners/Wheel.swift; sourceTree = "<group>"; };
 		403BBFE6648BFB26FB751A205EEF2CE9 /* GIFImageView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GIFImageView.modulemap; sourceTree = "<group>"; };
-		4175E8AC1932E2C0F51D9D5F9343C6AA /* Spinners.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Spinners.framework; path = Spinners.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4ED96CF28750FB8C70DC6F0396105771 /* GIFImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GIFImageView.framework; path = GIFImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4175E8AC1932E2C0F51D9D5F9343C6AA /* Spinners.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Spinners.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ED96CF28750FB8C70DC6F0396105771 /* GIFImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GIFImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		513486A13DBCC01BE37535F699BCBA84 /* SwipeCellKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeCellKit-prefix.pch"; sourceTree = "<group>"; };
 		59854E841CA249C58B8E3A7D2D20F108 /* SwipeExpanding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeExpanding.swift; path = Source/SwipeExpanding.swift; sourceTree = "<group>"; };
 		5A7062F2BF1DE27ECB55144268B4666C /* SwipeActionTransitioning.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionTransitioning.swift; path = Source/SwipeActionTransitioning.swift; sourceTree = "<group>"; };
@@ -121,8 +121,8 @@
 		99F82C5B796F48BD32D7C2898BB2AA15 /* Spinners-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spinners-prefix.pch"; sourceTree = "<group>"; };
 		9AB34901B6AEC7F7E515DE86C7011A67 /* SwipeCellKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwipeCellKit.release.xcconfig; sourceTree = "<group>"; };
 		9AE7038967C48329968029388EF79002 /* Spinners.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Spinners.modulemap; sourceTree = "<group>"; };
-		9D443E759FE97A6C0CA5A3B5E4142EBA /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwipeCellKit.framework; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D443E759FE97A6C0CA5A3B5E4142EBA /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1D52C4324E4AA9E556BD2C46C8B584C /* Bubble.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bubble.swift; path = Spinners/Bubble.swift; sourceTree = "<group>"; };
 		A58953204539B8D682FA6B0722522B19 /* SwipeTableViewCell+Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwipeTableViewCell+Accessibility.swift"; path = "Source/SwipeTableViewCell+Accessibility.swift"; sourceTree = "<group>"; };
 		A5B4ED6B5A8984025FD271BFC9EC7325 /* Pods-TrendingGifDisplayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TrendingGifDisplayer.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 		BBEA0BDAD30C255F5FA80B123350F1FF /* GIFImageView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GIFImageView-prefix.pch"; sourceTree = "<group>"; };
 		C06E7FE0E3765F652804D87442C00DFC /* Pods-TrendingGifDisplayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TrendingGifDisplayer-umbrella.h"; sourceTree = "<group>"; };
 		C2C49C124F3BCF7FE765FFE968F70E57 /* SwipeAccessibilityCustomAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeAccessibilityCustomAction.swift; path = Source/SwipeAccessibilityCustomAction.swift; sourceTree = "<group>"; };
-		CF57A341B17385693BB76A9130FF4384 /* Pods_TrendingGifDisplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TrendingGifDisplayer.framework; path = "Pods-TrendingGifDisplayer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF57A341B17385693BB76A9130FF4384 /* Pods_TrendingGifDisplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrendingGifDisplayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D52854D64AF1969FEBF4905733AF3CB0 /* SwipeActionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeActionButton.swift; path = Source/SwipeActionButton.swift; sourceTree = "<group>"; };
 		D742A2EF0EA0AFAD8C9124E99E81F036 /* SpinnerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpinnerDelegate.swift; path = Spinners/SpinnerDelegate.swift; sourceTree = "<group>"; };
 		E0CA721FB05AE3C7AF5EB5704B115107 /* Pods-TrendingGifDisplayer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TrendingGifDisplayer-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -210,7 +210,6 @@
 				0C17CA896C76FD7572FDF235D08AD867 /* GIFImageView.swift */,
 				BA75A5D5255D9D376428FE7713635C12 /* Support Files */,
 			);
-			name = GIFImageView;
 			path = GIFImageView;
 			sourceTree = "<group>";
 		};
@@ -236,7 +235,6 @@
 				3B240C9DDD72BF566E4F6B5B7AFA84FF /* Wheel.swift */,
 				FB7D1BBD38793471DB65C6AC3875BB53 /* Support Files */,
 			);
-			name = Spinners;
 			path = Spinners;
 			sourceTree = "<group>";
 		};
@@ -293,7 +291,6 @@
 				34524C1C911A5D34855F8331BF2F0C26 /* SwipeTransitionLayout.swift */,
 				5B53D60507EDF953DC3B921FB9055F6D /* Support Files */,
 			);
-			name = SwipeCellKit;
 			path = SwipeCellKit;
 			sourceTree = "<group>";
 		};
@@ -484,6 +481,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					833026B3023D6F61D8206A9462DEBF87 = {
+						LastSwiftMigration = 1200;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";

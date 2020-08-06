@@ -17,6 +17,12 @@ class GifTableViewCell: SwipeTableViewCell {
         fatalError("init(coder:) has never been implemented...")
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        imageView?.image = UIImage(named: "Black")
+    }
+
     func set(with gif: Gif, andDelegate delegate: SwipeTableViewCellDelegate) {
         self.delegate = delegate
 
