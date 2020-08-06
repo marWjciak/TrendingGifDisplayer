@@ -9,8 +9,16 @@ import SwipeCellKit
 import UIKit
 
 class GifTableViewCell: SwipeTableViewCell {
+    let gifImageView = UIImageView()
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.addSubview(gifImageView)
+        setImageConstraints()
+        gifImageView.contentMode = .scaleToFill
+        contentView.clipsToBounds = true
+        contentView.backgroundColor = .clear
+        backgroundColor = .black
     }
 
     required init?(coder: NSCoder) {
@@ -19,8 +27,7 @@ class GifTableViewCell: SwipeTableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-
-        imageView?.image = UIImage(named: "Black")
+        gifImageView.image = nil
     }
 
     func set(with gif: Gif, andDelegate delegate: SwipeTableViewCellDelegate) {
@@ -30,9 +37,8 @@ class GifTableViewCell: SwipeTableViewCell {
             let url = URL(string: gif.images.fixedWidthStill.url)
             if let url = url {
                 if let imageData = try? Data(contentsOf: url) {
-                    DispatchQueue.main.async {
-                        self.setImageConstraints()
-                        self.imageView?.image = UIImage(data: imageData)
+                    DispatchQueue.main.async { [weak self] in
+                        self?.gifImageView.image = UIImage(data: imageData)
                     }
                 }
             }
@@ -40,15 +46,13 @@ class GifTableViewCell: SwipeTableViewCell {
     }
 
     func setImageConstraints() {
-        guard let imageView = imageView else { return }
-
-        imageView.translatesAutoresizingMaskIntoConstraints = false
+        gifImageView.translatesAutoresizingMaskIntoConstraints = false
 
         let constraints = [
-            imageView.topAnchor.constraint(equalTo: topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor)
+            gifImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            gifImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            gifImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            gifImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
         ]
 
         NSLayoutConstraint.activate(constraints)

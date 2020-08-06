@@ -88,8 +88,8 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == gifList.count - 1, totalItems > gifList.count, !showFavourities {
-            DispatchQueue.main.async {
-                self.footerSpinner.startAnimating()
+            DispatchQueue.main.async { [weak self] in
+                self?.footerSpinner.startAnimating()
             }
             fetchGifs()
         }
@@ -115,8 +115,8 @@ class HomeTableViewController: UITableViewController {
             guard let data = data else { return }
 
             do {
-                DispatchQueue.main.async {
-                    self.spinner.present()
+                DispatchQueue.main.async { [weak self] in
+                    self?.spinner.present()
                 }
                 let gifs = try JSONDecoder().decode(Gifs.self, from: data)
                 gifs.data.forEach { gif in
@@ -124,14 +124,14 @@ class HomeTableViewController: UITableViewController {
                         self.totalGifList.append(gif)
                     }
                 }
-                DispatchQueue.main.async {
-                    self.spinner.dismiss()
+                DispatchQueue.main.async { [weak self] in
+                    self?.spinner.dismiss()
 
-                    if self.footerSpinner.isAnimating {
-                        self.footerSpinner.stopAnimating()
+                    if ((self?.footerSpinner.isAnimating) != nil) {
+                        self?.footerSpinner.stopAnimating()
                     }
 
-                    self.tableView.reloadData()
+                    self?.tableView.reloadData()
                 }
 
                 self.count = gifs.pagination.count

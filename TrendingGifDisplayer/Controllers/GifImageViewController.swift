@@ -39,8 +39,8 @@ class GifImageViewController: UIViewController {
         spinner = Spinners(type: .cube, with: self)
         spinner.setCustomSettings(borderColor: .systemYellow, backgroundColor: .clear, alpha: 0.8)
 
-        DispatchQueue.main.async {
-            self.spinner.present()
+        DispatchQueue.main.async { [weak self] in
+            self?.spinner.present()
         }
 
         setGifImage()
@@ -73,9 +73,9 @@ class GifImageViewController: UIViewController {
                 let data = try? Data(contentsOf: url)
 
                 if let imageData = data {
-                    DispatchQueue.main.async {
-                        self.spinner.dismiss()
-                        self.gifImage.image = UIImage.animatedImage(withData: imageData)
+                    DispatchQueue.main.async { [weak self] in
+                        self?.spinner.dismiss()
+                        self?.gifImage.image = UIImage.animatedImage(withData: imageData)
                     }
                 }
             }
