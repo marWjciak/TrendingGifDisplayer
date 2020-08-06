@@ -26,19 +26,13 @@ class GifImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(saveGifPressed))
+        navigationItem.rightBarButtonItem?.tintColor = .systemYellow
+
         let view = UIView()
         view.backgroundColor = .black
 
         gifImage.contentMode = UIView.ContentMode.scaleAspectFit
-
-//        if let width = NumberFormatter().number(from: gif.images.fixedWidth.width) {
-//            let imageWidth = CGFloat(truncating: width)
-//            gifImage.frame.size.width = imageWidth
-//        }
-//        if let height = NumberFormatter().number(from: gif.images.fixedWidth.height) {
-//            let imageHeight = CGFloat(truncating: height)
-//            gifImage.frame.size.height = imageHeight
-//        }
 
         spinner = Spinners(type: .cube, with: self)
         spinner.setCustomSettings(borderColor: .systemYellow, backgroundColor: .clear, alpha: 0.8)
@@ -55,6 +49,19 @@ class GifImageViewController: UIViewController {
         self.view = view
 
         setImageConstraints(to: view)
+    }
+
+    @objc private func saveGifPressed() {
+        let shareURL = URL(string: gif.images.fixedWidth.url)
+        let shareData = try? Data(contentsOf: shareURL!)
+        let gifData: [Any] = [shareData as Any]
+
+        let activityViewController: UIActivityViewController =
+            UIActivityViewController(activityItems: gifData, applicationActivities: nil)
+
+        activityViewController.popoverPresentationController?.sourceView = view
+
+        present(activityViewController, animated: true, completion: nil)
     }
 
     func setGifImage() {
