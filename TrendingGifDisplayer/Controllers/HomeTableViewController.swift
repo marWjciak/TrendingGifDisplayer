@@ -68,7 +68,7 @@ class HomeTableViewController: UITableViewController {
     @objc private func showFavouritiesPressed() {
         showFavourities = !showFavourities
         navigationItem.rightBarButtonItem?.image = favouriteImage
-        tableView.reloadData()
+        UIView.transition(with: tableView, duration: 1, options: .transitionCrossDissolve, animations: { self.tableView.reloadData() }, completion: nil)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
