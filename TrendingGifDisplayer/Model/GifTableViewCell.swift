@@ -8,6 +8,8 @@
 import SwipeCellKit
 import UIKit
 
+private let imageCache = NSCache<AnyObject, AnyObject>()
+
 class GifTableViewCell: SwipeTableViewCell {
     private let gifImageView = UIImageView()
 
@@ -36,11 +38,20 @@ class GifTableViewCell: SwipeTableViewCell {
 
         DispatchQueue.global(qos: .background).async {
             let url = URL(string: gif.images.fixedWidthStill.url)
+
+            if let imageFromCache = imageCache.object(forKey: url as AnyObject) as? UIImage {
+                DispatchQueue.main.async {
+                    self.gifImageView.image = imageFromCache
+                }
+                return
+            }
+
             if let url = url {
-                if let imageData = try? Data(contentsOf: url) {
+                if let imageData = try? Data(contentsOf: url), let imageToCache = UIImage(data: imageData) {
                     DispatchQueue.main.async { [weak self] in
-                        self?.gifImageView.image = UIImage(data: imageData)
+                        self?.gifImageView.image = imageToCache
                     }
+                    imageCache.setObject(imageToCache, forKey: url as AnyObject)
                 }
             }
         }
