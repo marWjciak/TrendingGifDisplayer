@@ -68,7 +68,7 @@ class HomeTableViewController: UITableViewController {
     @objc private func showFavouritiesPressed() {
         showFavourities = !showFavourities
         navigationItem.rightBarButtonItem?.image = favouriteImage
-        UIView.transition(with: tableView, duration: 1, options: .transitionCrossDissolve, animations: { self.tableView.reloadData() }, completion: nil)
+        UIView.transition(with: tableView, duration: 1, options: .transitionFlipFromRight, animations: { self.tableView.reloadData() }, completion: nil)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,6 +79,10 @@ class HomeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gifCell") as! GifTableViewCell
 
         cell.set(with: gifList[indexPath.row], andDelegate: self)
+
+        let animation = AnimationFactory.makeSlideIn(duration: 0.5, delayFactor: 0.05)
+        let animator = Animator(animation: animation)
+        animator.animate(cell: cell, at: indexPath, in: tableView)
 
         return cell
     }
@@ -192,12 +196,11 @@ extension HomeTableViewController: UINavigationControllerDelegate {
                               from fromVC: UIViewController,
                               to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         switch operation {
-        case .push:
-            return FadeInAnimator()
-        case .pop:
-            return FadeOutAnimator()
-        default:
-            return nil
+            case .push,
+                 .pop:
+                return FadeInAnimator()
+            default:
+                return nil
         }
     }
 }

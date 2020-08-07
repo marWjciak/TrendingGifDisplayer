@@ -13,12 +13,13 @@ class GifTableViewCell: SwipeTableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.addSubview(gifImageView)
-        setImageConstraints()
-        gifImageView.contentMode = .scaleToFill
         contentView.clipsToBounds = true
         contentView.backgroundColor = .clear
+        contentView.addSubview(gifImageView)
+        gifImageView.contentMode = .scaleToFill
         backgroundColor = .black
+
+        setImageConstraints()
     }
 
     required init?(coder: NSCoder) {

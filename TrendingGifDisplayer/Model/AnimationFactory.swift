@@ -11,9 +11,7 @@ import UIKit
 
 typealias Animation = (UITableViewCell, IndexPath, UITableView) -> Void
 
-
 open class FadeInAnimator: NSObject, UIViewControllerAnimatedTransitioning {
-
     open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.5
     }
@@ -22,8 +20,8 @@ open class FadeInAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         guard
             let fromViewController = transitionContext.viewController(forKey: .from),
             let toViewController = transitionContext.viewController(forKey: .to)
-            else {
-                return
+        else {
+            return
         }
 
         transitionContext.containerView.addSubview(toViewController.view)
@@ -31,7 +29,7 @@ open class FadeInAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         toViewController.view.frame = fromViewController.view.frame
         toViewController.view.alpha = 0
 
-        let duration = self.transitionDuration(using: transitionContext)
+        let duration = transitionDuration(using: transitionContext)
         UIView.animate(withDuration: duration, animations: {
             toViewController.view.alpha = 1
         }, completion: { _ in
@@ -40,29 +38,37 @@ open class FadeInAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     }
 }
 
-open class FadeOutAnimator: NSObject, UIViewControllerAnimatedTransitioning {
+class AnimationFactory {
+    static func makeSlideIn(duration: TimeInterval, delayFactor: Double) -> Animation {
+        return { cell, _, tableView in
+            cell.transform = CGAffineTransform(translationX: tableView.bounds.width, y: 0)
 
-    open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.5
+            UIView.animate(
+                withDuration: duration,
+                delay: delayFactor,
+                options: [.curveEaseOut],
+                animations: {
+                    cell.transform = CGAffineTransform(translationX: 0, y: 0)
+            })
+        }
+    }
+}
+
+final class Animator {
+    private var hasAnimatedAllCells = false
+    private let animation: Animation
+
+    init(animation: @escaping Animation) {
+        self.animation = animation
     }
 
-    open func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        guard
-            let fromViewController = transitionContext.viewController(forKey: .from),
-            let toViewController = transitionContext.viewController(forKey: .to)
-            else {
-                return
+    func animate(cell: GifTableViewCell, at indexPath: IndexPath, in tableView: UITableView) {
+        guard !hasAnimatedAllCells else {
+            return
         }
 
-        transitionContext.containerView.insertSubview(toViewController.view, belowSubview: fromViewController.view)
+        animation(cell, indexPath, tableView)
 
-        toViewController.view.frame = fromViewController.view.frame
-
-        let duration = self.transitionDuration(using: transitionContext)
-        UIView.animate(withDuration: duration, animations: {
-            fromViewController.view.alpha = 0
-        }, completion: { _ in
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-        })
+        hasAnimatedAllCells = true
     }
 }
