@@ -17,6 +17,7 @@
 		D36B587D24D9BF2400B320E2 /* GifTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36B587C24D9BF2300B320E2 /* GifTableViewCell.swift */; };
 		D382FAA024DA76A700BBE9EE /* FavouriteGifsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FA9F24DA76A700BBE9EE /* FavouriteGifsController.swift */; };
 		D382FAA324DB688700BBE9EE /* GifImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FAA224DB688700BBE9EE /* GifImageViewController.swift */; };
+		D382FAAE24DCCBB000BBE9EE /* AnimationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FAAD24DCCBB000BBE9EE /* AnimationFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		D36B587C24D9BF2300B320E2 /* GifTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifTableViewCell.swift; sourceTree = "<group>"; };
 		D382FA9F24DA76A700BBE9EE /* FavouriteGifsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteGifsController.swift; sourceTree = "<group>"; };
 		D382FAA224DB688700BBE9EE /* GifImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImageViewController.swift; sourceTree = "<group>"; };
+		D382FAAD24DCCBB000BBE9EE /* AnimationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +88,8 @@
 		D36B585D24D9B15A00B320E2 /* TrendingGifDisplayer */ = {
 			isa = PBXGroup;
 			children = (
-				D36B587224D9B45B00B320E2 /* Model */,
 				D36B585E24D9B15A00B320E2 /* AppDelegate.swift */,
+				D36B587224D9B45B00B320E2 /* Model */,
 				D382FAA124DB672C00BBE9EE /* Controllers */,
 				D36B586724D9B15C00B320E2 /* Assets.xcassets */,
 				D36B586924D9B15C00B320E2 /* LaunchScreen.storyboard */,
@@ -99,6 +101,7 @@
 		D36B587224D9B45B00B320E2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D382FAAD24DCCBB000BBE9EE /* AnimationFactory.swift */,
 				D36B587324D9B46B00B320E2 /* Gifs.swift */,
 				D36B587724D9B62F00B320E2 /* Gif.swift */,
 				D36B587C24D9BF2300B320E2 /* GifTableViewCell.swift */,
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D382FAA324DB688700BBE9EE /* GifImageViewController.swift in Sources */,
+				D382FAAE24DCCBB000BBE9EE /* AnimationFactory.swift in Sources */,
 				D36B587824D9B62F00B320E2 /* Gif.swift in Sources */,
 				D36B587424D9B46B00B320E2 /* Gifs.swift in Sources */,
 				D36B586324D9B15A00B320E2 /* HomeTableViewController.swift in Sources */,

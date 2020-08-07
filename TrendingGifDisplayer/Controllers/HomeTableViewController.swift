@@ -46,6 +46,7 @@ class HomeTableViewController: UITableViewController {
         navigationController?.navigationBar.barTintColor = .black
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.systemYellow]
         navigationController?.navigationBar.topItem?.title = "Gif Displayer"
+        navigationController?.delegate = self
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -127,7 +128,7 @@ class HomeTableViewController: UITableViewController {
                 DispatchQueue.main.async { [weak self] in
                     self?.spinner.dismiss()
 
-                    if ((self?.footerSpinner.isAnimating) != nil) {
+                    if (self?.footerSpinner.isAnimating) != nil {
                         self?.footerSpinner.stopAnimating()
                     }
 
@@ -182,5 +183,21 @@ extension HomeTableViewController: SwipeTableViewCellDelegate {
         options.expansionStyle = .selection
 
         return options
+    }
+}
+
+extension HomeTableViewController: UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController,
+                              animationControllerFor operation: UINavigationController.Operation,
+                              from fromVC: UIViewController,
+                              to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        switch operation {
+        case .push:
+            return FadeInAnimator()
+        case .pop:
+            return FadeOutAnimator()
+        default:
+            return nil
+        }
     }
 }
