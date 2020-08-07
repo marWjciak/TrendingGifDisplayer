@@ -10,16 +10,16 @@ import SwipeCellKit
 import UIKit
 
 class HomeTableViewController: UITableViewController {
-    let favouritieGifController = FavouriteGifsController(defaults: .standard)
-    var spinner = Spinners()
-    let footerSpinner = UIActivityIndicatorView(style: .whiteLarge)
-    var pageNumber: Int = 0
-    var count: Int = 0
-    var totalItems: Int = 0
-    var showFavourities: Bool = false
-    var totalGifList: [Gif] = []
+    private let favouritieGifController = FavouriteGifsController(defaults: .standard)
+    private var spinner = Spinners()
+    private let footerSpinner = UIActivityIndicatorView(style: .whiteLarge)
+    private var pageNumber: Int = 0
+    private var count: Int = 0
+    private var totalItems: Int = 0
+    private var showFavourities: Bool = false
+    private var totalGifList: [Gif] = []
 
-    var gifList: [Gif] {
+    private var gifList: [Gif] {
         if showFavourities {
             return totalGifList.filter { gif in
                 favouritieGifController.contains(gif.id)
@@ -29,7 +29,7 @@ class HomeTableViewController: UITableViewController {
         }
     }
 
-    var favouriteImage: UIImage? {
+    private var favouriteImage: UIImage? {
         if showFavourities {
             return UIImage(named: "heart.fill") ?? nil
         } else {
@@ -105,7 +105,7 @@ class HomeTableViewController: UITableViewController {
         navigationController?.pushViewController(destinationVC, animated: true)
     }
 
-    func fetchGifs() {
+    private func fetchGifs() {
         let url = URL(string: "https://api.giphy.com/v1/gifs/trending?api_key=7fZEqVczx5ZTQk64kHJ0dPDDZCazxtF0&offset=\(pageNumber * count)")
 
         guard let safeUrl = url else { return }
@@ -115,7 +115,7 @@ class HomeTableViewController: UITableViewController {
         pageNumber += 1
     }
 
-    func fetch(from url: URL) {
+    private func fetch(from url: URL) {
         let task = URLSession.shared.dataTask(with: url) { data, _, _ in
             guard let data = data else { return }
 

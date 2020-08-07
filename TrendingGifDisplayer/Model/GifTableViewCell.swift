@@ -9,7 +9,7 @@ import SwipeCellKit
 import UIKit
 
 class GifTableViewCell: SwipeTableViewCell {
-    let gifImageView = UIImageView()
+    private let gifImageView = UIImageView()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -46,7 +46,7 @@ class GifTableViewCell: SwipeTableViewCell {
         }
     }
 
-    func setImageConstraints() {
+    private func setImageConstraints() {
         gifImageView.translatesAutoresizingMaskIntoConstraints = false
 
         let constraints = [

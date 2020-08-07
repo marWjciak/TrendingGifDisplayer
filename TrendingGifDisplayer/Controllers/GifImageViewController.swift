@@ -10,9 +10,9 @@ import GIFImageView
 import Spinners
 
 class GifImageViewController: UIViewController {
-    var gifImage = UIImageView()
-    var gif: Gif
-    var spinner = Spinners()
+    private var gifImage = UIImageView()
+    private var gif: Gif
+    private var spinner = Spinners()
 
     init(with gif: Gif) {
         self.gif = gif
@@ -66,7 +66,7 @@ class GifImageViewController: UIViewController {
         present(activityViewController, animated: true, completion: nil)
     }
 
-    func setGifImage() {
+    private func setGifImage() {
         DispatchQueue.global(qos: .background).async {
             let url = URL(string: self.gif.images.fixedWidth.url)
             if let url = url {
@@ -82,7 +82,7 @@ class GifImageViewController: UIViewController {
         }
     }
 
-    func setImageConstraints(to view: UIView) {
+    private func setImageConstraints(to view: UIView) {
         gifImage.translatesAutoresizingMaskIntoConstraints = false
 
         let constraints = [
