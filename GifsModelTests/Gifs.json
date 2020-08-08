@@ -1,0 +1,27 @@
+{
+   "data":[
+      {
+         "type":"gif",
+         "id":"1",
+         "url":"testUrl",
+         "title":"testJSON",
+         "images":{
+            "original":{
+               "height":"480",
+               "url":"testOriginalImageUrl",
+               "width":"480"
+            },
+            "original_still":{
+               "height":"480",
+               "url":"testOriginalStillImageUrl",
+               "width":"480"
+            }
+         }
+      }
+   ],
+   "pagination":{
+      "total_count":1,
+      "count":1,
+      "offset":0
+   }
+}

@@ -13,7 +13,6 @@ struct Gif: Decodable {
     var url: String
     var title: String
     var images: GifImages
-    var isFavourite: Bool = false
 
     enum CodingKeys: String, CodingKey {
         case type
@@ -35,12 +34,12 @@ extension Gif: Comparable {
 }
 
 struct GifImages: Decodable {
-    var fixedWidth: GifImage
-    var fixedWidthStill: GifImage
+    var original: GifImage
+    var originalStill: GifImage
 
     enum CodingKeys: String, CodingKey {
-        case fixedWidth = "original"
-        case fixedWidthStill = "original_still"
+        case original = "original"
+        case originalStill = "original_still"
     }
 }
 

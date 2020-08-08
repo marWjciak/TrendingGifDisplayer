@@ -54,7 +54,7 @@ class GifImageViewController: UIViewController {
     }
 
     @objc private func saveGifPressed() {
-        let shareURL = URL(string: gif.images.fixedWidth.url)
+        let shareURL = URL(string: gif.images.original.url)
         let shareData = try? Data(contentsOf: shareURL!)
         let gifData: [Any] = [shareData as Any]
 
@@ -68,7 +68,7 @@ class GifImageViewController: UIViewController {
 
     private func setGifImage() {
         DispatchQueue.global(qos: .background).async {
-            let url = URL(string: self.gif.images.fixedWidth.url)
+            let url = URL(string: self.gif.images.original.url)
             if let url = url {
                 let data = try? Data(contentsOf: url)
 

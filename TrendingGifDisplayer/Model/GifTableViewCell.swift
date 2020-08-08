@@ -37,7 +37,7 @@ class GifTableViewCell: SwipeTableViewCell {
         self.delegate = delegate
 
         DispatchQueue.global(qos: .background).async {
-            let url = URL(string: gif.images.fixedWidthStill.url)
+            let url = URL(string: gif.images.originalStill.url)
 
             if let imageFromCache = imageCache.object(forKey: url as AnyObject) as? UIImage {
                 DispatchQueue.main.async {
