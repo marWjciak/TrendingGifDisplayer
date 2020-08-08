@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 class FavouriteGifsController {
+    static var shared = FavouriteGifsController(defaults: .standard)
+
     private let defaults: UserDefaults
     private let defaultsKey = "favouriteGifs"
     private(set) lazy var favourites = getList()

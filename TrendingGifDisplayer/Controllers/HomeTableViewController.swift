@@ -10,14 +10,15 @@ import SwipeCellKit
 import UIKit
 
 class HomeTableViewController: UITableViewController {
-    private let favouritieGifController = FavouriteGifsController(defaults: .standard)
+    var showFavourities: Bool = false
+    var totalGifList: [Gif] = []
+
+    private let favouritieGifController = FavouriteGifsController.shared
     private var spinner = Spinners()
     private let footerSpinner = UIActivityIndicatorView(style: .whiteLarge)
     private var pageNumber: Int = 0
     private var count: Int = 0
     private var totalItems: Int = 0
-    private var showFavourities: Bool = false
-    private var totalGifList: [Gif] = []
 
     private var gifList: [Gif] {
         if showFavourities {
@@ -31,9 +32,9 @@ class HomeTableViewController: UITableViewController {
 
     private var favouriteImage: UIImage? {
         if showFavourities {
-            return UIImage(named: "heart.fill") ?? nil
+            return K.shared.heartFilledImage ?? nil
         } else {
-            return UIImage(named: "heart") ?? nil
+            return K.shared.heartEmptyImage ?? nil
         }
     }
 
@@ -45,14 +46,14 @@ class HomeTableViewController: UITableViewController {
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.barTintColor = .black
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.systemYellow]
-        navigationController?.navigationBar.topItem?.title = "Gif Displayer"
+        navigationController?.navigationBar.topItem?.title = K.shared.appName
         navigationController?.delegate = self
 
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.backgroundColor = .black
-        tableView.register(GifTableViewCell.self, forCellReuseIdentifier: "gifCell")
+        tableView.register(GifTableViewCell.self, forCellReuseIdentifier: K.shared.gifCellIdentifier)
 
         spinner = Spinners(type: .cube, with: self)
         spinner.setCustomSettings(borderColor: .systemYellow, backgroundColor: .clear, alpha: 0.8)
@@ -76,7 +77,7 @@ class HomeTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "gifCell", for: indexPath) as! GifTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.shared.gifCellIdentifier, for: indexPath) as! GifTableViewCell
 
         cell.set(with: gifList[indexPath.row], andDelegate: self)
 
@@ -106,7 +107,7 @@ class HomeTableViewController: UITableViewController {
     }
 
     private func fetchGifs() {
-        let url = URL(string: "https://api.giphy.com/v1/gifs/trending?api_key=7fZEqVczx5ZTQk64kHJ0dPDDZCazxtF0&offset=\(pageNumber * count)")
+        let url = URL(string: "\(K.shared.gifsApiUrlText)\(pageNumber * count)")
 
         guard let safeUrl = url else { return }
 
@@ -154,7 +155,7 @@ extension HomeTableViewController: SwipeTableViewCellDelegate {
         guard orientation == .right else { return nil }
         guard indexPath.row < gifList.count else { return nil }
 
-        let toFavouriteAction = SwipeAction(style: .default, title: "Favourite") { _, indexPath in
+        let toFavouriteAction = SwipeAction(style: .default, title: "") { _, indexPath in
 
             if self.favouritieGifController.contains(self.gifList[indexPath.row].id) {
                 self.favouritieGifController.rem(gif: self.gifList[indexPath.row])
@@ -169,9 +170,11 @@ extension HomeTableViewController: SwipeTableViewCellDelegate {
         toFavouriteAction.backgroundColor = .systemBlue
 
         if favouritieGifController.contains(gifList[indexPath.row].id) {
-            toFavouriteAction.image = UIImage(named: "heart.fill")
+            toFavouriteAction.image = K.shared.heartFilledImage
+            toFavouriteAction.title = K.shared.removeFromFavouriteText
         } else {
-            toFavouriteAction.image = UIImage(named: "heart")
+            toFavouriteAction.image = K.shared.heartEmptyImage
+            toFavouriteAction.title = K.shared.addToFavouriteText
         }
 
         return [toFavouriteAction]

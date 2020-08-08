@@ -13,6 +13,7 @@ class GifImageViewController: UIViewController {
     private var gifImage = UIImageView()
     private var gif: Gif
     private var spinner = Spinners()
+    private let favouritieGifController = FavouriteGifsController.shared
 
     init(with gif: Gif) {
         self.gif = gif
@@ -26,8 +27,13 @@ class GifImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(saveGifPressed))
-        navigationItem.rightBarButtonItem?.tintColor = .systemYellow
+        let shareGifItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(saveGifPressed))
+        shareGifItem.tintColor = .systemYellow
+
+        let addToFavourite = UIBarButtonItem(image: K.shared.heartAddSign, style: .plain, target: self, action: #selector(addToFavouritiesPressed))
+        addToFavourite.tintColor = .systemYellow
+
+        navigationItem.rightBarButtonItems = [shareGifItem, addToFavourite]
 
         navigationController?.navigationBar.tintColor = .systemYellow
 
@@ -64,6 +70,19 @@ class GifImageViewController: UIViewController {
         activityViewController.popoverPresentationController?.sourceView = view
 
         present(activityViewController, animated: true, completion: nil)
+    }
+
+    @objc private func addToFavouritiesPressed() {
+        if self.favouritieGifController.contains(gif.id) {
+            let alert = UIAlertController(title: "Gif already exists", message: K.shared.gifExistsMessage, preferredStyle: .alert)
+            alert.addAction(.init(title: "Ok", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        } else {
+            self.favouritieGifController.add(gif: gif)
+            let alert = UIAlertController(title: "Success!", message: K.shared.gifAddedMessage, preferredStyle: .alert)
+            alert.addAction(.init(title: "Ok", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
     }
 
     private func setGifImage() {
