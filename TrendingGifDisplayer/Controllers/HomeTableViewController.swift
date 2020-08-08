@@ -76,7 +76,7 @@ class HomeTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "gifCell") as! GifTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "gifCell", for: indexPath) as! GifTableViewCell
 
         cell.set(with: gifList[indexPath.row], andDelegate: self)
 
@@ -163,10 +163,6 @@ extension HomeTableViewController: SwipeTableViewCellDelegate {
                 }
             } else {
                 self.favouritieGifController.add(gif: self.gifList[indexPath.row])
-            }
-
-            if self.showFavourities {
-                tableView.reloadData()
             }
         }
 
