@@ -22,10 +22,19 @@
 		D382FABE24DE1A4100BBE9EE /* Gifs.json in Resources */ = {isa = PBXBuildFile; fileRef = D382FABD24DE1A4100BBE9EE /* Gifs.json */; };
 		D382FAC124DE2BBF00BBE9EE /* XCTestCase+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FAC024DE2BBF00BBE9EE /* XCTestCase+JSON.swift */; };
 		D382FAE124DEBCC800BBE9EE /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FAE024DEBCC800BBE9EE /* K.swift */; };
+		D382FAE924DF521E00BBE9EE /* FavouriteGifsControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FAE824DF521E00BBE9EE /* FavouriteGifsControllerTests.swift */; };
+		D382FAF324DF595200BBE9EE /* MockUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FAF224DF595200BBE9EE /* MockUserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		D382FAB824DE191300BBE9EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D36B585324D9B15A00B320E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D36B585A24D9B15A00B320E2;
+			remoteInfo = TrendingGifDisplayer;
+		};
+		D382FAEB24DF521E00BBE9EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D36B585324D9B15A00B320E2 /* Project object */;
 			proxyType = 1;
@@ -56,6 +65,10 @@
 		D382FABD24DE1A4100BBE9EE /* Gifs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Gifs.json; sourceTree = "<group>"; };
 		D382FAC024DE2BBF00BBE9EE /* XCTestCase+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+JSON.swift"; sourceTree = "<group>"; };
 		D382FAE024DEBCC800BBE9EE /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		D382FAE624DF521E00BBE9EE /* FavouriteGifsControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FavouriteGifsControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D382FAE824DF521E00BBE9EE /* FavouriteGifsControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteGifsControllerTests.swift; sourceTree = "<group>"; };
+		D382FAEA24DF521E00BBE9EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D382FAF224DF595200BBE9EE /* MockUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +81,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D382FAB024DE191300BBE9EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D382FAE324DF521E00BBE9EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -99,6 +119,7 @@
 			children = (
 				D36B585D24D9B15A00B320E2 /* TrendingGifDisplayer */,
 				D382FAB424DE191300BBE9EE /* GifsModelTests */,
+				D382FAE724DF521E00BBE9EE /* FavouriteGifsControllerTests */,
 				D36B585C24D9B15A00B320E2 /* Products */,
 				BDF15927F702C0955C187674 /* Pods */,
 				871997D67A47FAD91E624F57 /* Frameworks */,
@@ -110,6 +131,7 @@
 			children = (
 				D36B585B24D9B15A00B320E2 /* TrendingGifDisplayer.app */,
 				D382FAB324DE191300BBE9EE /* GifsModelTests.xctest */,
+				D382FAE624DF521E00BBE9EE /* FavouriteGifsControllerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,6 +190,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D382FAE724DF521E00BBE9EE /* FavouriteGifsControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D382FAE824DF521E00BBE9EE /* FavouriteGifsControllerTests.swift */,
+				D382FAEA24DF521E00BBE9EE /* Info.plist */,
+				D382FAF224DF595200BBE9EE /* MockUserDefaults.swift */,
+			);
+			path = FavouriteGifsControllerTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,6 +240,24 @@
 			productReference = D382FAB324DE191300BBE9EE /* GifsModelTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D382FAE524DF521E00BBE9EE /* FavouriteGifsControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D382FAED24DF521E00BBE9EE /* Build configuration list for PBXNativeTarget "FavouriteGifsControllerTests" */;
+			buildPhases = (
+				D382FAE224DF521E00BBE9EE /* Sources */,
+				D382FAE324DF521E00BBE9EE /* Frameworks */,
+				D382FAE424DF521E00BBE9EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D382FAEC24DF521E00BBE9EE /* PBXTargetDependency */,
+			);
+			name = FavouriteGifsControllerTests;
+			productName = FavouriteGifsControllerTests;
+			productReference = D382FAE624DF521E00BBE9EE /* FavouriteGifsControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -221,6 +271,10 @@
 						CreatedOnToolsVersion = 12.0;
 					};
 					D382FAB224DE191300BBE9EE = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = D36B585A24D9B15A00B320E2;
+					};
+					D382FAE524DF521E00BBE9EE = {
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = D36B585A24D9B15A00B320E2;
 					};
@@ -241,6 +295,7 @@
 			targets = (
 				D36B585A24D9B15A00B320E2 /* TrendingGifDisplayer */,
 				D382FAB224DE191300BBE9EE /* GifsModelTests */,
+				D382FAE524DF521E00BBE9EE /* FavouriteGifsControllerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -260,6 +315,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D382FABE24DE1A4100BBE9EE /* Gifs.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D382FAE424DF521E00BBE9EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +395,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D382FAE224DF521E00BBE9EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D382FAF324DF595200BBE9EE /* MockUserDefaults.swift in Sources */,
+				D382FAE924DF521E00BBE9EE /* FavouriteGifsControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -340,6 +411,11 @@
 			isa = PBXTargetDependency;
 			target = D36B585A24D9B15A00B320E2 /* TrendingGifDisplayer */;
 			targetProxy = D382FAB824DE191300BBE9EE /* PBXContainerItemProxy */;
+		};
+		D382FAEC24DF521E00BBE9EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D36B585A24D9B15A00B320E2 /* TrendingGifDisplayer */;
+			targetProxy = D382FAEB24DF521E00BBE9EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -553,6 +629,46 @@
 			};
 			name = Release;
 		};
+		D382FAEE24DF521E00BBE9EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MK6VA8XF3X;
+				INFOPLIST_FILE = FavouriteGifsControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wojciak.marcin.FavouriteGifsControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrendingGifDisplayer.app/TrendingGifDisplayer";
+			};
+			name = Debug;
+		};
+		D382FAEF24DF521E00BBE9EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MK6VA8XF3X;
+				INFOPLIST_FILE = FavouriteGifsControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wojciak.marcin.FavouriteGifsControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrendingGifDisplayer.app/TrendingGifDisplayer";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -579,6 +695,15 @@
 			buildConfigurations = (
 				D382FABB24DE191300BBE9EE /* Debug */,
 				D382FABC24DE191300BBE9EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D382FAED24DF521E00BBE9EE /* Build configuration list for PBXNativeTarget "FavouriteGifsControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D382FAEE24DF521E00BBE9EE /* Debug */,
+				D382FAEF24DF521E00BBE9EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
