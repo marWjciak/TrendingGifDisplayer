@@ -25,7 +25,7 @@ class GifsModelTests: XCTestCase {
         XCTAssertEqual(1, gifs.data.count)
 
         let gif = gifs.data[0]
-        
+
         XCTAssertEqual("gif", gif.type)
         XCTAssertEqual("1", gif.id)
         XCTAssertEqual("testUrl", gif.url)

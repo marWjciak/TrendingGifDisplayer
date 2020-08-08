@@ -18,23 +18,17 @@
 		D382FAA024DA76A700BBE9EE /* FavouriteGifsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FA9F24DA76A700BBE9EE /* FavouriteGifsController.swift */; };
 		D382FAA324DB688700BBE9EE /* GifImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FAA224DB688700BBE9EE /* GifImageViewController.swift */; };
 		D382FAAE24DCCBB000BBE9EE /* AnimationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FAAD24DCCBB000BBE9EE /* AnimationFactory.swift */; };
-		D382FAB624DE191300BBE9EE /* GifsModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FAB524DE191300BBE9EE /* GifsModelTests.swift */; };
-		D382FABE24DE1A4100BBE9EE /* Gifs.json in Resources */ = {isa = PBXBuildFile; fileRef = D382FABD24DE1A4100BBE9EE /* Gifs.json */; };
-		D382FAC124DE2BBF00BBE9EE /* XCTestCase+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FAC024DE2BBF00BBE9EE /* XCTestCase+JSON.swift */; };
 		D382FAE124DEBCC800BBE9EE /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FAE024DEBCC800BBE9EE /* K.swift */; };
-		D382FAE924DF521E00BBE9EE /* FavouriteGifsControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FAE824DF521E00BBE9EE /* FavouriteGifsControllerTests.swift */; };
-		D382FAF324DF595200BBE9EE /* MockUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FAF224DF595200BBE9EE /* MockUserDefaults.swift */; };
+		D382FB1524DF62C900BBE9EE /* FavouriteGifsControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FB1424DF62C900BBE9EE /* FavouriteGifsControllerTests.swift */; };
+		D382FB1624DF62F000BBE9EE /* MockUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FAF224DF595200BBE9EE /* MockUserDefaults.swift */; };
+		D382FB1824DF634200BBE9EE /* GifsModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FB1724DF634200BBE9EE /* GifsModelTests.swift */; };
+		D382FB1B24DF641C00BBE9EE /* XCTestCase+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FAC024DE2BBF00BBE9EE /* XCTestCase+JSON.swift */; };
+		D382FB1F24DF669700BBE9EE /* Gifs.json in Resources */ = {isa = PBXBuildFile; fileRef = D382FABD24DE1A4100BBE9EE /* Gifs.json */; };
+		D382FB2124DF66F200BBE9EE /* HomeTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382FB2024DF66F200BBE9EE /* HomeTableViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D382FAB824DE191300BBE9EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D36B585324D9B15A00B320E2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D36B585A24D9B15A00B320E2;
-			remoteInfo = TrendingGifDisplayer;
-		};
-		D382FAEB24DF521E00BBE9EE /* PBXContainerItemProxy */ = {
+		D382FB0F24DF629400BBE9EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D36B585324D9B15A00B320E2 /* Project object */;
 			proxyType = 1;
@@ -59,16 +53,15 @@
 		D382FA9F24DA76A700BBE9EE /* FavouriteGifsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteGifsController.swift; sourceTree = "<group>"; };
 		D382FAA224DB688700BBE9EE /* GifImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImageViewController.swift; sourceTree = "<group>"; };
 		D382FAAD24DCCBB000BBE9EE /* AnimationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationFactory.swift; sourceTree = "<group>"; };
-		D382FAB324DE191300BBE9EE /* GifsModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GifsModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D382FAB524DE191300BBE9EE /* GifsModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifsModelTests.swift; sourceTree = "<group>"; };
-		D382FAB724DE191300BBE9EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D382FABD24DE1A4100BBE9EE /* Gifs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Gifs.json; sourceTree = "<group>"; };
 		D382FAC024DE2BBF00BBE9EE /* XCTestCase+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+JSON.swift"; sourceTree = "<group>"; };
 		D382FAE024DEBCC800BBE9EE /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
-		D382FAE624DF521E00BBE9EE /* FavouriteGifsControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FavouriteGifsControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D382FAE824DF521E00BBE9EE /* FavouriteGifsControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteGifsControllerTests.swift; sourceTree = "<group>"; };
-		D382FAEA24DF521E00BBE9EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D382FAF224DF595200BBE9EE /* MockUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaults.swift; sourceTree = "<group>"; };
+		D382FB0A24DF629400BBE9EE /* TrendingGifDisplayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendingGifDisplayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D382FB0E24DF629400BBE9EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D382FB1424DF62C900BBE9EE /* FavouriteGifsControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteGifsControllerTests.swift; sourceTree = "<group>"; };
+		D382FB1724DF634200BBE9EE /* GifsModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifsModelTests.swift; sourceTree = "<group>"; };
+		D382FB2024DF66F200BBE9EE /* HomeTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,14 +73,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D382FAB024DE191300BBE9EE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D382FAE324DF521E00BBE9EE /* Frameworks */ = {
+		D382FB0724DF629400BBE9EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -118,8 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				D36B585D24D9B15A00B320E2 /* TrendingGifDisplayer */,
-				D382FAB424DE191300BBE9EE /* GifsModelTests */,
-				D382FAE724DF521E00BBE9EE /* FavouriteGifsControllerTests */,
+				D382FB0B24DF629400BBE9EE /* TrendingGifDisplayerTests */,
 				D36B585C24D9B15A00B320E2 /* Products */,
 				BDF15927F702C0955C187674 /* Pods */,
 				871997D67A47FAD91E624F57 /* Frameworks */,
@@ -130,8 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				D36B585B24D9B15A00B320E2 /* TrendingGifDisplayer.app */,
-				D382FAB324DE191300BBE9EE /* GifsModelTests.xctest */,
-				D382FAE624DF521E00BBE9EE /* FavouriteGifsControllerTests.xctest */,
+				D382FB0A24DF629400BBE9EE /* TrendingGifDisplayerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,18 +155,17 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		D382FAB424DE191300BBE9EE /* GifsModelTests */ = {
+		D382FB0B24DF629400BBE9EE /* TrendingGifDisplayerTests */ = {
 			isa = PBXGroup;
 			children = (
-				D382FABF24DE2BA700BBE9EE /* Extensions */,
-				D382FAB524DE191300BBE9EE /* GifsModelTests.swift */,
-				D382FAB724DE191300BBE9EE /* Info.plist */,
-				D382FABD24DE1A4100BBE9EE /* Gifs.json */,
+				D382FB1E24DF65BF00BBE9EE /* FavouriteGifsController */,
+				D382FB1D24DF65A500BBE9EE /* GifsModel */,
+				D382FB0E24DF629400BBE9EE /* Info.plist */,
 			);
-			path = GifsModelTests;
+			path = TrendingGifDisplayerTests;
 			sourceTree = "<group>";
 		};
-		D382FABF24DE2BA700BBE9EE /* Extensions */ = {
+		D382FB1C24DF646300BBE9EE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				D382FAC024DE2BBF00BBE9EE /* XCTestCase+JSON.swift */,
@@ -190,14 +173,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		D382FAE724DF521E00BBE9EE /* FavouriteGifsControllerTests */ = {
+		D382FB1D24DF65A500BBE9EE /* GifsModel */ = {
 			isa = PBXGroup;
 			children = (
-				D382FAE824DF521E00BBE9EE /* FavouriteGifsControllerTests.swift */,
-				D382FAEA24DF521E00BBE9EE /* Info.plist */,
-				D382FAF224DF595200BBE9EE /* MockUserDefaults.swift */,
+				D382FB1C24DF646300BBE9EE /* Extensions */,
+				D382FB1724DF634200BBE9EE /* GifsModelTests.swift */,
+				D382FABD24DE1A4100BBE9EE /* Gifs.json */,
 			);
-			path = FavouriteGifsControllerTests;
+			path = GifsModel;
+			sourceTree = "<group>";
+		};
+		D382FB1E24DF65BF00BBE9EE /* FavouriteGifsController */ = {
+			isa = PBXGroup;
+			children = (
+				D382FB2024DF66F200BBE9EE /* HomeTableViewControllerTests.swift */,
+				D382FAF224DF595200BBE9EE /* MockUserDefaults.swift */,
+				D382FB1424DF62C900BBE9EE /* FavouriteGifsControllerTests.swift */,
+			);
+			path = FavouriteGifsController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,40 +215,22 @@
 			productReference = D36B585B24D9B15A00B320E2 /* TrendingGifDisplayer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D382FAB224DE191300BBE9EE /* GifsModelTests */ = {
+		D382FB0924DF629400BBE9EE /* TrendingGifDisplayerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D382FABA24DE191300BBE9EE /* Build configuration list for PBXNativeTarget "GifsModelTests" */;
+			buildConfigurationList = D382FB1324DF629400BBE9EE /* Build configuration list for PBXNativeTarget "TrendingGifDisplayerTests" */;
 			buildPhases = (
-				D382FAAF24DE191300BBE9EE /* Sources */,
-				D382FAB024DE191300BBE9EE /* Frameworks */,
-				D382FAB124DE191300BBE9EE /* Resources */,
+				D382FB0624DF629400BBE9EE /* Sources */,
+				D382FB0724DF629400BBE9EE /* Frameworks */,
+				D382FB0824DF629400BBE9EE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D382FAB924DE191300BBE9EE /* PBXTargetDependency */,
+				D382FB1024DF629400BBE9EE /* PBXTargetDependency */,
 			);
-			name = GifsModelTests;
-			productName = GifsModelTests;
-			productReference = D382FAB324DE191300BBE9EE /* GifsModelTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D382FAE524DF521E00BBE9EE /* FavouriteGifsControllerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D382FAED24DF521E00BBE9EE /* Build configuration list for PBXNativeTarget "FavouriteGifsControllerTests" */;
-			buildPhases = (
-				D382FAE224DF521E00BBE9EE /* Sources */,
-				D382FAE324DF521E00BBE9EE /* Frameworks */,
-				D382FAE424DF521E00BBE9EE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D382FAEC24DF521E00BBE9EE /* PBXTargetDependency */,
-			);
-			name = FavouriteGifsControllerTests;
-			productName = FavouriteGifsControllerTests;
-			productReference = D382FAE624DF521E00BBE9EE /* FavouriteGifsControllerTests.xctest */;
+			name = TrendingGifDisplayerTests;
+			productName = TrendingGifDisplayerTests;
+			productReference = D382FB0A24DF629400BBE9EE /* TrendingGifDisplayerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -270,11 +245,7 @@
 					D36B585A24D9B15A00B320E2 = {
 						CreatedOnToolsVersion = 12.0;
 					};
-					D382FAB224DE191300BBE9EE = {
-						CreatedOnToolsVersion = 12.0;
-						TestTargetID = D36B585A24D9B15A00B320E2;
-					};
-					D382FAE524DF521E00BBE9EE = {
+					D382FB0924DF629400BBE9EE = {
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = D36B585A24D9B15A00B320E2;
 					};
@@ -294,8 +265,7 @@
 			projectRoot = "";
 			targets = (
 				D36B585A24D9B15A00B320E2 /* TrendingGifDisplayer */,
-				D382FAB224DE191300BBE9EE /* GifsModelTests */,
-				D382FAE524DF521E00BBE9EE /* FavouriteGifsControllerTests */,
+				D382FB0924DF629400BBE9EE /* TrendingGifDisplayerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -310,18 +280,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D382FAB124DE191300BBE9EE /* Resources */ = {
+		D382FB0824DF629400BBE9EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D382FABE24DE1A4100BBE9EE /* Gifs.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D382FAE424DF521E00BBE9EE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				D382FB1F24DF669700BBE9EE /* Gifs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,36 +349,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D382FAAF24DE191300BBE9EE /* Sources */ = {
+		D382FB0624DF629400BBE9EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D382FAC124DE2BBF00BBE9EE /* XCTestCase+JSON.swift in Sources */,
-				D382FAB624DE191300BBE9EE /* GifsModelTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D382FAE224DF521E00BBE9EE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D382FAF324DF595200BBE9EE /* MockUserDefaults.swift in Sources */,
-				D382FAE924DF521E00BBE9EE /* FavouriteGifsControllerTests.swift in Sources */,
+				D382FB1824DF634200BBE9EE /* GifsModelTests.swift in Sources */,
+				D382FB1524DF62C900BBE9EE /* FavouriteGifsControllerTests.swift in Sources */,
+				D382FB1B24DF641C00BBE9EE /* XCTestCase+JSON.swift in Sources */,
+				D382FB2124DF66F200BBE9EE /* HomeTableViewControllerTests.swift in Sources */,
+				D382FB1624DF62F000BBE9EE /* MockUserDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D382FAB924DE191300BBE9EE /* PBXTargetDependency */ = {
+		D382FB1024DF629400BBE9EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D36B585A24D9B15A00B320E2 /* TrendingGifDisplayer */;
-			targetProxy = D382FAB824DE191300BBE9EE /* PBXContainerItemProxy */;
-		};
-		D382FAEC24DF521E00BBE9EE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D36B585A24D9B15A00B320E2 /* TrendingGifDisplayer */;
-			targetProxy = D382FAEB24DF521E00BBE9EE /* PBXContainerItemProxy */;
+			targetProxy = D382FB0F24DF629400BBE9EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -482,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -537,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -589,19 +541,19 @@
 			};
 			name = Release;
 		};
-		D382FABB24DE191300BBE9EE /* Debug */ = {
+		D382FB1124DF629400BBE9EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MK6VA8XF3X;
-				INFOPLIST_FILE = GifsModelTests/Info.plist;
+				INFOPLIST_FILE = TrendingGifDisplayerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wojciak.marcin.GifsModelTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wojciak.marcin.TrendingGifDisplayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -609,59 +561,19 @@
 			};
 			name = Debug;
 		};
-		D382FABC24DE191300BBE9EE /* Release */ = {
+		D382FB1224DF629400BBE9EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MK6VA8XF3X;
-				INFOPLIST_FILE = GifsModelTests/Info.plist;
+				INFOPLIST_FILE = TrendingGifDisplayerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wojciak.marcin.GifsModelTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrendingGifDisplayer.app/TrendingGifDisplayer";
-			};
-			name = Release;
-		};
-		D382FAEE24DF521E00BBE9EE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MK6VA8XF3X;
-				INFOPLIST_FILE = FavouriteGifsControllerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wojciak.marcin.FavouriteGifsControllerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrendingGifDisplayer.app/TrendingGifDisplayer";
-			};
-			name = Debug;
-		};
-		D382FAEF24DF521E00BBE9EE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MK6VA8XF3X;
-				INFOPLIST_FILE = FavouriteGifsControllerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wojciak.marcin.FavouriteGifsControllerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wojciak.marcin.TrendingGifDisplayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -690,20 +602,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D382FABA24DE191300BBE9EE /* Build configuration list for PBXNativeTarget "GifsModelTests" */ = {
+		D382FB1324DF629400BBE9EE /* Build configuration list for PBXNativeTarget "TrendingGifDisplayerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D382FABB24DE191300BBE9EE /* Debug */,
-				D382FABC24DE191300BBE9EE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D382FAED24DF521E00BBE9EE /* Build configuration list for PBXNativeTarget "FavouriteGifsControllerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D382FAEE24DF521E00BBE9EE /* Debug */,
-				D382FAEF24DF521E00BBE9EE /* Release */,
+				D382FB1124DF629400BBE9EE /* Debug */,
+				D382FB1224DF629400BBE9EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
