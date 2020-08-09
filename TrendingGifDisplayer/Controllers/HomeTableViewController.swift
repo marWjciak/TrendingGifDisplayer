@@ -41,29 +41,19 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: favouriteImage, style: .plain, target: self, action: #selector(showFavouritiesPressed))
-        navigationItem.rightBarButtonItem?.tintColor = .red
-        navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.barTintColor = .black
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.systemYellow]
-        navigationController?.navigationBar.topItem?.title = K.shared.appName
-        navigationController?.delegate = self
-
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.separatorStyle = .none
-        tableView.backgroundColor = .black
-        tableView.register(GifTableViewCell.self, forCellReuseIdentifier: K.shared.gifCellIdentifier)
+        configureBarButtonItems()
+        configureNavigationController()
+        configureTableView()
 
         spinner = Spinners(type: .cube, with: self)
         spinner.setCustomSettings(borderColor: .systemYellow, backgroundColor: .clear, alpha: 0.8)
 
-        footerSpinner.color = .systemYellow
-        footerSpinner.hidesWhenStopped = true
-        tableView.tableFooterView = footerSpinner
-        tableView.tableFooterView?.backgroundColor = .black
-
         fetchGifs()
+    }
+
+    private func configureBarButtonItems() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: favouriteImage, style: .plain, target: self, action: #selector(showFavouritiesPressed))
+        navigationItem.rightBarButtonItem?.tintColor = .red
     }
 
     @objc private func showFavouritiesPressed() {
@@ -72,38 +62,25 @@ class HomeTableViewController: UITableViewController {
         UIView.transition(with: tableView, duration: 1, options: .transitionFlipFromRight, animations: { self.tableView.reloadData() }, completion: nil)
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gifList.count
+    private func configureNavigationController() {
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.systemYellow]
+        navigationController?.navigationBar.topItem?.title = K.shared.appName
+        navigationController?.delegate = self
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.shared.gifCellIdentifier, for: indexPath) as! GifTableViewCell
+    private func configureTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .black
+        tableView.register(GifTableViewCell.self, forCellReuseIdentifier: K.shared.gifCellIdentifier)
 
-        cell.set(with: gifList[indexPath.row], andDelegate: self)
-
-        let animation = AnimationFactory.makeSlideIn(duration: 0.5, delayFactor: 0.05)
-        let animator = Animator(animation: animation)
-        animator.animate(cell: cell, at: indexPath, in: tableView)
-
-        return cell
-    }
-
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
-    }
-
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == gifList.count - 1, totalItems > gifList.count, !showFavourities {
-            DispatchQueue.main.async { [weak self] in
-                self?.footerSpinner.startAnimating()
-            }
-            fetchGifs()
-        }
-    }
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let destinationVC = GifImageViewController(with: gifList[indexPath.row])
-        navigationController?.pushViewController(destinationVC, animated: true)
+        footerSpinner.color = .systemYellow
+        footerSpinner.hidesWhenStopped = true
+        tableView.tableFooterView = footerSpinner
+        tableView.tableFooterView?.backgroundColor = .black
     }
 
     private func fetchGifs() {
@@ -147,6 +124,43 @@ class HomeTableViewController: UITableViewController {
             }
         }
         task.resume()
+    }
+
+    // MARK: - TableView Delegate & DataSource
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return gifList.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.shared.gifCellIdentifier, for: indexPath) as! GifTableViewCell
+
+        cell.set(with: gifList[indexPath.row], andDelegate: self)
+
+        let animation = AnimationFactory.makeSlideIn(duration: 0.5, delayFactor: 0.05)
+        let animator = Animator(animation: animation)
+        animator.animate(cell: cell, at: indexPath, in: tableView)
+
+        return cell
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let height = tableView.bounds.size.height - (navigationController?.navigationBar.bounds.size.height ?? 200)
+        return height / 3
+    }
+
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == gifList.count - 1, totalItems > gifList.count, !showFavourities {
+            DispatchQueue.main.async { [weak self] in
+                self?.footerSpinner.startAnimating()
+            }
+            fetchGifs()
+        }
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let destinationVC = GifImageViewController(with: gifList[indexPath.row])
+        navigationController?.pushViewController(destinationVC, animated: true)
     }
 }
 

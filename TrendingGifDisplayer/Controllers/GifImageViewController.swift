@@ -73,12 +73,12 @@ class GifImageViewController: UIViewController {
     }
 
     @objc private func addToFavouritiesPressed() {
-        if self.favouritieGifController.contains(gif.id) {
+        if favouritieGifController.contains(gif.id) {
             let alert = UIAlertController(title: "Gif already exists", message: K.shared.gifExistsMessage, preferredStyle: .alert)
             alert.addAction(.init(title: "Ok", style: .cancel, handler: nil))
             present(alert, animated: true, completion: nil)
         } else {
-            self.favouritieGifController.add(gif: gif)
+            favouritieGifController.add(gif: gif)
             let alert = UIAlertController(title: "Success!", message: K.shared.gifAddedMessage, preferredStyle: .alert)
             alert.addAction(.init(title: "Ok", style: .cancel, handler: nil))
             present(alert, animated: true, completion: nil)

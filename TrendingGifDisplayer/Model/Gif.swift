@@ -28,7 +28,7 @@ extension Gif: Comparable {
         return lhs.id < rhs.id
     }
 
-    static func ==(lhs: Gif, rhs: Gif) -> Bool {
+    static func == (lhs: Gif, rhs: Gif) -> Bool {
         return rhs.id == lhs.id
     }
 }
@@ -38,7 +38,7 @@ struct GifImages: Decodable {
     var originalStill: GifImage
 
     enum CodingKeys: String, CodingKey {
-        case original = "original"
+        case original
         case originalStill = "original_still"
     }
 }
