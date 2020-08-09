@@ -14,9 +14,11 @@ struct K {
     let appName = "Gif Displayer"
     let addToFavouriteText = "Add"
     let removeFromFavouriteText = "Remove"
+
     let heartEmptyImage = UIImage(named: "heart")
     let heartFilledImage = UIImage(named: "heart.fill")
     let heartAddSign = UIImage(named: "heart.add")
+    
     let gifExistsMessage = "Gif you are trying to add already exists in your favourite list."
     let gifAddedMessage = "Added to your favourite list."
 

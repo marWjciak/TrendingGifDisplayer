@@ -12,7 +12,6 @@ import Spinners
 class GifImageViewController: UIViewController {
     private var gifImage = UIImageView()
     private var gif: Gif
-    private var spinner = Spinners()
     private let favouritieGifController = FavouriteGifsController.shared
 
     init(with gif: Gif) {
@@ -29,12 +28,7 @@ class GifImageViewController: UIViewController {
 
         configureBarButtonItems()
         configureView()
-        configureSpinner()
-
-        DispatchQueue.main.async { [weak self] in
-            self?.spinner.present()
-        }
-
+        startSpinner(with: self)
         setGifImage()
         setImageConstraints(to: view)
     }
@@ -84,11 +78,6 @@ class GifImageViewController: UIViewController {
         self.view = view
     }
 
-    private func configureSpinner() {
-        spinner = Spinners(type: .cube, with: self)
-        spinner.setCustomSettings(borderColor: .systemYellow, backgroundColor: .clear, alpha: 0.8)
-    }
-
     private func setGifImage() {
         DispatchQueue.global(qos: .background).async {
             let url = URL(string: self.gif.images.original.url)
@@ -97,7 +86,7 @@ class GifImageViewController: UIViewController {
 
                 if let imageData = data {
                     DispatchQueue.main.async { [weak self] in
-                        self?.spinner.dismiss()
+                        self?.stopSpinner()
                         self?.gifImage.image = UIImage.animatedImage(withData: imageData)
                     }
                 }

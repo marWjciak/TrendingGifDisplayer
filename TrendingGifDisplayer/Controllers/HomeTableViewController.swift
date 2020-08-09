@@ -14,7 +14,6 @@ class HomeTableViewController: UITableViewController {
     var totalGifList: [Gif] = []
 
     private let favouritieGifController = FavouriteGifsController.shared
-    private var spinner = Spinners()
     private let footerSpinner = UIActivityIndicatorView(style: .whiteLarge)
     private var pageNumber: Int = 0
     private var count: Int = 0
@@ -44,7 +43,6 @@ class HomeTableViewController: UITableViewController {
         configureBarButtonItems()
         configureNavigationController()
         configureTableView()
-        configureSpinner()
         fetchGifs()
     }
 
@@ -80,16 +78,12 @@ class HomeTableViewController: UITableViewController {
         tableView.tableFooterView?.backgroundColor = .black
     }
 
-    private func configureSpinner() {
-        spinner = Spinners(type: .cube, with: self)
-        spinner.setCustomSettings(borderColor: .systemYellow, backgroundColor: .clear, alpha: 0.8)
-    }
-
     private func fetchGifs() {
         let url = URL(string: "\(K.shared.gifsApiUrlText)\(pageNumber * count)")
 
         guard let safeUrl = url else { return }
 
+        startSpinner(with: self)
         fetch(from: safeUrl)
 
         pageNumber += 1
@@ -100,24 +94,22 @@ class HomeTableViewController: UITableViewController {
             guard let data = data else { return }
 
             do {
-                DispatchQueue.main.async { [weak self] in
-                    self?.spinner.present()
-                }
                 let gifs = try JSONDecoder().decode(Gifs.self, from: data)
                 gifs.data.forEach { gif in
                     if !self.totalGifList.contains(gif) {
                         self.totalGifList.append(gif)
                     }
                 }
-                DispatchQueue.main.async { [weak self] in
-                    self?.spinner.dismiss()
 
+                DispatchQueue.main.async { [weak self] in
                     if (self?.footerSpinner.isAnimating) != nil {
                         self?.footerSpinner.stopAnimating()
                     }
 
                     self?.tableView.reloadData()
                 }
+
+                self.stopSpinner()
 
                 self.count = gifs.pagination.count
                 self.totalItems = gifs.pagination.totalCount
