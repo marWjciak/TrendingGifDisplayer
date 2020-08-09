@@ -44,10 +44,7 @@ class HomeTableViewController: UITableViewController {
         configureBarButtonItems()
         configureNavigationController()
         configureTableView()
-
-        spinner = Spinners(type: .cube, with: self)
-        spinner.setCustomSettings(borderColor: .systemYellow, backgroundColor: .clear, alpha: 0.8)
-
+        configureSpinner()
         fetchGifs()
     }
 
@@ -81,6 +78,11 @@ class HomeTableViewController: UITableViewController {
         footerSpinner.hidesWhenStopped = true
         tableView.tableFooterView = footerSpinner
         tableView.tableFooterView?.backgroundColor = .black
+    }
+
+    private func configureSpinner() {
+        spinner = Spinners(type: .cube, with: self)
+        spinner.setCustomSettings(borderColor: .systemYellow, backgroundColor: .clear, alpha: 0.8)
     }
 
     private func fetchGifs() {

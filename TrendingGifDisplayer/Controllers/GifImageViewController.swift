@@ -27,6 +27,19 @@ class GifImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureBarButtonItems()
+        configureView()
+        configureSpinner()
+
+        DispatchQueue.main.async { [weak self] in
+            self?.spinner.present()
+        }
+
+        setGifImage()
+        setImageConstraints(to: view)
+    }
+
+    private func configureBarButtonItems() {
         let shareGifItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(saveGifPressed))
         shareGifItem.tintColor = .systemYellow
 
@@ -34,29 +47,7 @@ class GifImageViewController: UIViewController {
         addToFavourite.tintColor = .systemYellow
 
         navigationItem.rightBarButtonItems = [shareGifItem, addToFavourite]
-
         navigationController?.navigationBar.tintColor = .systemYellow
-
-        let view = UIView()
-        view.backgroundColor = .black
-
-        gifImage.contentMode = UIView.ContentMode.scaleAspectFit
-
-        spinner = Spinners(type: .cube, with: self)
-        spinner.setCustomSettings(borderColor: .systemYellow, backgroundColor: .clear, alpha: 0.8)
-
-        DispatchQueue.main.async { [weak self] in
-            self?.spinner.present()
-        }
-
-        setGifImage()
-        gifImage.center = self.view.center
-
-        view.addSubview(gifImage)
-
-        self.view = view
-
-        setImageConstraints(to: view)
     }
 
     @objc private func saveGifPressed() {
@@ -83,6 +74,19 @@ class GifImageViewController: UIViewController {
             alert.addAction(.init(title: "Ok", style: .cancel, handler: nil))
             present(alert, animated: true, completion: nil)
         }
+    }
+
+    private func configureView() {
+        let view = UIView()
+        view.backgroundColor = .black
+        gifImage.contentMode = UIView.ContentMode.scaleAspectFit
+        view.addSubview(gifImage)
+        self.view = view
+    }
+
+    private func configureSpinner() {
+        spinner = Spinners(type: .cube, with: self)
+        spinner.setCustomSettings(borderColor: .systemYellow, backgroundColor: .clear, alpha: 0.8)
     }
 
     private func setGifImage() {
