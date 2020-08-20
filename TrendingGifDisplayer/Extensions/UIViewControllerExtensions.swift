@@ -8,12 +8,14 @@
 import Spinners
 import UIKit
 
+//MARK: - Spinner in View Controller
+
 extension UIViewController {
     var spinnerTag: Int { return 999999 }
 
-    func startSpinner(with viewController: UIViewController) {
+    func startSpinner() {
         DispatchQueue.main.async {
-            let spinner = Spinners(type: .cube, with: viewController)
+            let spinner = Spinners(type: .cube, with: self)
             spinner.setCustomSettings(borderColor: .systemYellow, backgroundColor: .clear, alpha: 0.8)
             spinner.tag = self.spinnerTag
 
@@ -29,5 +31,18 @@ extension UIViewController {
             
             spinner.dismiss()
         }
+    }
+}
+
+
+//MARK: - Show Alert Window
+
+extension UIViewController {
+    func presentAlertPopup(title: String,
+                           message: String,
+                           actions: [UIAlertAction]) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        actions.forEach { alertController.addAction($0) }
+        present(alertController, animated: true, completion: nil)
     }
 }

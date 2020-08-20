@@ -17,7 +17,8 @@ extension XCTestCase {
     func getJSONData() throws -> Gifs? {
         let bundle = Bundle(for: type(of: self))
 
-        guard let url = bundle.url(forResource: "Gifs", withExtension: "json") else {
+        if let url = bundle.url(forResource: "Gifs", withExtension: "json") {
+        } else {
             XCTFail("Missing file Gifs.json")
             throw TestError.fileNotFound
         }

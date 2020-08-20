@@ -48,8 +48,12 @@ class GifTableViewCell: SwipeTableViewCell {
 
             if let url = url {
                 if let imageData = try? Data(contentsOf: url), let imageToCache = UIImage(data: imageData) {
-                    DispatchQueue.main.async { [weak self] in
-                        self?.gifImageView.image = imageToCache
+                    DispatchQueue.main.async { [unowned self] in
+                        self.gifImageView.image = imageToCache
+                        let heightMultiplier = CGFloat((gif.images.originalStill.height as NSString).doubleValue)
+                        let widthMultiplier = CGFloat((gif.images.originalStill.width as NSString).doubleValue)
+                        self.gifImageView.heightAnchor.constraint(equalTo: self.gifImageView.widthAnchor,
+                                                                  multiplier: heightMultiplier / widthMultiplier).isActive = true
                     }
                     imageCache.setObject(imageToCache, forKey: url as AnyObject)
                 }
@@ -64,7 +68,8 @@ class GifTableViewCell: SwipeTableViewCell {
             gifImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             gifImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             gifImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            gifImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+            gifImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            gifImageView.heightAnchor.constraint(equalTo: gifImageView.widthAnchor, multiplier: 9 / 16)
         ]
 
         NSLayoutConstraint.activate(constraints)

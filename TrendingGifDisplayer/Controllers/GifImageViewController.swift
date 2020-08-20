@@ -28,16 +28,20 @@ class GifImageViewController: UIViewController {
 
         configureBarButtonItems()
         configureView()
-        startSpinner(with: self)
         setGifImage()
         setImageConstraints(to: view)
     }
 
     private func configureBarButtonItems() {
-        let shareGifItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(saveGifPressed))
+        let shareGifItem = UIBarButtonItem(barButtonSystemItem: .action,
+                                           target: self,
+                                           action: #selector(saveGifPressed))
         shareGifItem.tintColor = .systemYellow
 
-        let addToFavourite = UIBarButtonItem(image: K.shared.heartAddSign, style: .plain, target: self, action: #selector(addToFavouritiesPressed))
+        let addToFavourite = UIBarButtonItem(image: Constants.shared.heartAddSign,
+                                             style: .plain,
+                                             target: self,
+                                             action: #selector(addToFavouritiesPressed))
         addToFavourite.tintColor = .systemYellow
 
         navigationItem.rightBarButtonItems = [shareGifItem, addToFavourite]
@@ -58,16 +62,21 @@ class GifImageViewController: UIViewController {
     }
 
     @objc private func addToFavouritiesPressed() {
+        var title = ""
+        var message = ""
+
         if favouritieGifController.contains(gif.id) {
-            let alert = UIAlertController(title: "Gif already exists", message: K.shared.gifExistsMessage, preferredStyle: .alert)
-            alert.addAction(.init(title: "Ok", style: .cancel, handler: nil))
-            present(alert, animated: true, completion: nil)
+            title = "Gif already exists"
+            message = Constants.shared.gifExistsMessage
         } else {
             favouritieGifController.add(gif: gif)
-            let alert = UIAlertController(title: "Success!", message: K.shared.gifAddedMessage, preferredStyle: .alert)
-            alert.addAction(.init(title: "Ok", style: .cancel, handler: nil))
-            present(alert, animated: true, completion: nil)
+            title = "Success"
+            message = Constants.shared.gifAddedMessage
         }
+
+        presentAlertPopup(title: title,
+                          message: message,
+                          actions: [UIAlertAction(title: "Ok", style: .cancel, handler: nil)])
     }
 
     private func configureView() {
@@ -79,18 +88,38 @@ class GifImageViewController: UIViewController {
     }
 
     private func setGifImage() {
+        startSpinner()
+        getImage(from: gif.images.original.url) { result in
+            switch result {
+                case .success(let image):
+                    DispatchQueue.main.async {
+                        self.gifImage.image = image
+                    }
+                case .failure(let error):
+                    self.presentAlertPopup(title: "Error", message: error.localizedDescription, actions: [UIAlertAction(title: "Ok", style: .default, handler: nil)])
+            }
+            self.stopSpinner()
+        }
+    }
+
+    private func getImage(from urlText: String, completed: @escaping (Result<UIImage, GGError>) -> Void) {
         DispatchQueue.global(qos: .background).async {
-            let url = URL(string: self.gif.images.original.url)
+            let url = URL(string: urlText)
+
             if let url = url {
                 let data = try? Data(contentsOf: url)
 
                 if let imageData = data {
-                    DispatchQueue.main.async { [weak self] in
-                        self?.stopSpinner()
-                        self?.gifImage.image = UIImage.animatedImage(withData: imageData)
+                    guard let image = UIImage.animatedImage(withData: imageData) else {
+                        completed(.failure(.invalidData))
+                        return
                     }
+
+                    completed(.success(image))
+                    return
                 }
             }
+            completed(.failure(.unableToComplete))
         }
     }
 

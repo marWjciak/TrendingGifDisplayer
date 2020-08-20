@@ -1,5 +1,5 @@
 //
-//  K.swift
+//  Constants.swift
 //  TrendingGifDisplayer
 //
 //  Created by Marcin Wójciak on 08/08/2020.
@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-struct K {
-    static let shared = K()
+struct Constants {
+    static let shared = Constants()
     let gifsApiUrlText = "https://api.giphy.com/v1/gifs/trending?api_key=7fZEqVczx5ZTQk64kHJ0dPDDZCazxtF0&offset="
     let appName = "Gif Displayer"
     let addToFavouriteText = "Add"
