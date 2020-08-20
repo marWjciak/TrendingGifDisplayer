@@ -179,12 +179,12 @@ extension HomeTableViewController: SwipeTableViewCellDelegate {
         let toFavouriteAction = SwipeAction(style: .default, title: "") { _, indexPath in
 
             if self.favouritieGifController.contains(self.gifList[indexPath.row].id) {
-                self.favouritieGifController.rem(gif: self.gifList[indexPath.row])
+                self.favouritieGifController.removeFavourite(gif: self.gifList[indexPath.row])
                 if self.showFavourities {
                     self.tableView.deleteRows(at: [indexPath], with: .automatic)
                 }
             } else {
-                self.favouritieGifController.add(gif: self.gifList[indexPath.row])
+                self.favouritieGifController.addFavoutire(gif: self.gifList[indexPath.row])
             }
         }
 

@@ -12,6 +12,7 @@ private let imageCache = NSCache<AnyObject, AnyObject>()
 
 class GifTableViewCell: SwipeTableViewCell {
     private let gifImageView = UIImageView()
+    private var gifHeightConstraint: NSLayoutConstraint?
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -42,6 +43,7 @@ class GifTableViewCell: SwipeTableViewCell {
             if let imageFromCache = imageCache.object(forKey: url as AnyObject) as? UIImage {
                 DispatchQueue.main.async {
                     self.gifImageView.image = imageFromCache
+                    self.gifHeightConstraint?.constant = self.gifImageView.frame.width * imageFromCache.size.height / imageFromCache.size.width
                 }
                 return
             }
@@ -50,10 +52,7 @@ class GifTableViewCell: SwipeTableViewCell {
                 if let imageData = try? Data(contentsOf: url), let imageToCache = UIImage(data: imageData) {
                     DispatchQueue.main.async { [unowned self] in
                         self.gifImageView.image = imageToCache
-                        let heightMultiplier = CGFloat((gif.images.originalStill.height as NSString).doubleValue)
-                        let widthMultiplier = CGFloat((gif.images.originalStill.width as NSString).doubleValue)
-                        self.gifImageView.heightAnchor.constraint(equalTo: self.gifImageView.widthAnchor,
-                                                                  multiplier: heightMultiplier / widthMultiplier).isActive = true
+                        self.gifHeightConstraint?.constant = self.gifImageView.frame.width * imageToCache.size.height / imageToCache.size.width
                     }
                     imageCache.setObject(imageToCache, forKey: url as AnyObject)
                 }
@@ -64,12 +63,16 @@ class GifTableViewCell: SwipeTableViewCell {
     private func setImageConstraints() {
         gifImageView.translatesAutoresizingMaskIntoConstraints = false
 
+        let heightConstraint = gifImageView.heightAnchor.constraint(equalToConstant: 200)
+        gifHeightConstraint = heightConstraint
+
         let constraints = [
             gifImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             gifImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             gifImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             gifImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            gifImageView.heightAnchor.constraint(equalTo: gifImageView.widthAnchor, multiplier: 9 / 16)
+            gifHeightConstraint ?? heightConstraint
+
         ]
 
         NSLayoutConstraint.activate(constraints)

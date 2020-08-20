@@ -19,14 +19,14 @@ class FavouriteGifsController {
         self.defaults = defaults
     }
 
-    func add(gif: Gif) {
+    func addFavoutire(gif: Gif) {
         if !favourites.contains(gif.id) {
             favourites.append(gif.id)
         }
         defaults.set(favourites, forKey: defaultsKey)
     }
 
-    func rem(gif: Gif) {
+    func removeFavourite(gif: Gif) {
         let gifIndex = favourites.firstIndex(of: gif.id)
         if let index = gifIndex {
             favourites.remove(at: index)

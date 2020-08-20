@@ -10,7 +10,6 @@ import UIKit
 
 struct Constants {
     static let shared = Constants()
-    let gifsApiUrlText = "https://api.giphy.com/v1/gifs/trending?api_key=7fZEqVczx5ZTQk64kHJ0dPDDZCazxtF0&offset="
     let appName = "Gif Displayer"
     let addToFavouriteText = "Add"
     let removeFromFavouriteText = "Remove"

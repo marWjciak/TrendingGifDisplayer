@@ -24,11 +24,11 @@ class FavouriteGifsControllerTests: XCTestCase {
 
         XCTAssertEqual(0, favouriteGifsController.favourites.count)
 
-        favouriteGifsController.add(gif: gif)
+        favouriteGifsController.addFavoutire(gif: gif)
         XCTAssertEqual(1, favouriteGifsController.favourites.count)
         XCTAssertEqual("1234", favouriteGifsController.favourites[0])
 
-        favouriteGifsController.add(gif: gif)
+        favouriteGifsController.addFavoutire(gif: gif)
         XCTAssertEqual(1, favouriteGifsController.favourites.count)
     }
 
@@ -39,7 +39,7 @@ class FavouriteGifsControllerTests: XCTestCase {
 
         XCTAssertEqual(0, favouriteGifsController.favourites.count)
 
-        favouriteGifsController.add(gif: gif)
+        favouriteGifsController.addFavoutire(gif: gif)
 
         let gifIDs = favouriteGifsController.getList()
 
@@ -52,10 +52,10 @@ class FavouriteGifsControllerTests: XCTestCase {
                                   originalStill: GifImage(url: "", height: "", width: ""))
         let gif = Gif(type: "", id: "1234", url: "", title: "", images: gifImages)
 
-        favouriteGifsController.add(gif: gif)
+        favouriteGifsController.addFavoutire(gif: gif)
         XCTAssertEqual(1, favouriteGifsController.favourites.count)
 
-        favouriteGifsController.rem(gif: gif)
+        favouriteGifsController.removeFavourite(gif: gif)
         XCTAssertEqual(0, favouriteGifsController.favourites.count)
     }
 }

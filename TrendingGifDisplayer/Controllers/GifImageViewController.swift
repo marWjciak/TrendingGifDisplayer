@@ -69,7 +69,7 @@ class GifImageViewController: UIViewController {
             title = "Gif already exists"
             message = Constants.shared.gifExistsMessage
         } else {
-            favouritieGifController.add(gif: gif)
+            favouritieGifController.addFavoutire(gif: gif)
             title = "Success"
             message = Constants.shared.gifAddedMessage
         }
