@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Gifs: Decodable {
+struct ApiData: Decodable {
     var data: [Gif]
     var pagination: Pagination
 }

@@ -13,6 +13,7 @@ class HomeTableViewController: UITableViewController {
     var showFavourities: Bool = false
     var totalGifList: [Gif] = []
 
+    private let networkManager = NetworkManager()
     private let favouritieGifController = FavouriteGifsController.shared
     private let footerSpinner = UIActivityIndicatorView(style: .whiteLarge)
     private var pageNumber: Int = 0
@@ -123,39 +124,43 @@ class HomeTableViewController: UITableViewController {
     }
 
     private func getPagination() {
-        NetworkManager.shared.getPaginationInfo { result in
+        
+        networkManager.getResponseFromServer { (result) in
             switch result {
-                case .success(let pagination):
-                    self.count = pagination.count
-                    self.totalItems = pagination.totalCount
-                case .failure(let error):
-                    DispatchQueue.main.async {
-                        self.presentAlertPopup(title: "Failure",
-                                               message: "Cannot get Pagination info. \n\(error.localizedDescription)",
-                                               actions: [
-                                                   UIAlertAction(title: "Try again", style: .default, handler: { _ in self.getPagination() }),
-                                                   UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-                                               ])
-                    }
+            case .success(let response):
+                self.count = response.pagination.count
+                self.totalItems = response.pagination.totalCount
+                
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self.presentAlertPopup(title: "Failure",
+                                           message: "Cannot get Pagination info. \n\(error.localizedDescription)",
+                                           actions: [
+                                               UIAlertAction(title: "Try again", style: .default, handler: { _ in self.getPagination() }),
+                                               UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                                           ])
+                }
             }
         }
     }
 
     private func getGifsFromServer() {
         startSpinner()
-
-        NetworkManager.shared.getGifs(for: pageNumber, count: count) { [weak self] result in
+        
+        networkManager.getResponseFromServer(parameters: ["offset=\(pageNumber * count)"]) { [weak self] (result) in
             guard let self = self else { return }
-
+            
             switch result {
-                case .success(let gifs):
-                    self.pageNumber += 1
-                    self.totalGifList.append(contentsOf: gifs)
-
-                    dismissSpinner(spinner: self.footerSpinner)
-                    DispatchQueue.main.async { self.tableView.reloadData() }
-                case .failure(let error):
-                    print(error.localizedDescription)
+            case .success(let response):
+                self.pageNumber += 1
+                self.totalGifList.append(contentsOf: response.data)
+                
+                dismissSpinner(spinner: self.footerSpinner)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
             }
             self.stopSpinner()
         }
